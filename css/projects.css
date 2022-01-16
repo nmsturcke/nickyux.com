@@ -86,7 +86,7 @@ a:hover {
     color: #aaaaaa;
     font-size: 0.9rem;
     transform: translateY(150px);
-    animation: footer-appear var(--time-footer-appear) calc(var(--time-header-appear) + var(--time-content-appear)) forwards;
+    animation: footer-appear var(--time-footer-appear) forwards;
 }
 
 .footer-content, .footer-content * {
