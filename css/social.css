@@ -4,7 +4,6 @@
     --colour-magenta: #E5097F;
     --colour-green: #28b463;
     --colour-blue: #6495ED;
-    --colour-dark-blue: #2874A6;
     --time-header-appear: 1000ms;
     --time-content-appear: 500ms;
     --time-footer-appear: 1000ms;
@@ -17,13 +16,8 @@ html, body, .main {
     background-color: var(--colour-background);
 }
 
-a, a:visited {
+a {
     color: var(--colour-blue);
-}
-
-a:hover {
-    color: var(--colour-dark-blue);
-    font-weight: 450;
 }
 
 .header {
@@ -62,15 +56,23 @@ a:hover {
 }
 
 .main-content {
-    padding-top: 30px;
+    padding-top: 50px;
     color: white;
     text-align: center;
     opacity: 0;
     animation: content-appear var(--time-content-appear) var(--time-header-appear) forwards;
 }
 
-.my-projects * {
-    padding-bottom: 10px;
+.contact-methods {
+    display: flex;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.contact {
+    cursor: pointer;
 }
 
 .text-footer {
@@ -85,8 +87,8 @@ a:hover {
     width: 100%;
     color: #aaaaaa;
     font-size: 0.9rem;
-    transform: translateY(150px);
-    animation: footer-appear var(--time-footer-appear) forwards;
+    transform: translateY(390px);
+    animation: footer-appear var(--time-footer-appear) calc(var(--time-footer-appear) + var(--time-content-appear)) forwards;
 }
 
 .footer-content, .footer-content * {
@@ -112,6 +114,14 @@ a:hover {
         padding: 5px 0 5px 0;
     }
 
+    .contact-methods {
+        display: block;
+    }
+
+    .contact {
+        padding-bottom: 20px;
+    }
+
     .footer-content * {
         display: inline-block;
         width: 50%;
@@ -120,6 +130,11 @@ a:hover {
 
     .gh-pages {
         display: none;
+    }
+
+    .footer {
+        transform: translateY(50px);
+        animation: footer-appear-phone var(--time-footer-appear) calc(var(--time-footer-appear) + var(--time-content-appear)) forwards;
     }
 }
 
@@ -137,6 +152,12 @@ a:hover {
 
 @keyframes footer-appear {
     100% {
-        transform: translateY(100px);
+        transform: translateY(340px);
+    }
+}
+
+@keyframes footer-appear-phone {
+    100% {
+        transform: translateY(5px);
     }
 }
