@@ -17,6 +17,7 @@ html, body, .main {
     background-color: var(--colour-background);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 a {
@@ -137,7 +138,7 @@ a {
     .gh-pages {
         display: none;
     }
-    
+
     .header {
         padding: 10px 0 50px 0;
     }
