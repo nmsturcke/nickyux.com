@@ -18,7 +18,6 @@ html, body, .main {
     background-color: var(--colour-background);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 /* Scroolbars */
