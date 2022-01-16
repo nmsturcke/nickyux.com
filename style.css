@@ -1,16 +1,23 @@
 :root {
-    --colour-background: rgb(82, 82, 82);
-    --colour-header: rgb(44, 44, 44);
+    --colour-background: #525252;
+    --colour-header: #2c2c2c;
     --colour-magenta: #E5097F;
-    --colour-green: #28B463;
+    --colour-green: #28b463;
+    --colour-blue: #6495ED;
     --time-header-appear: 1000ms;
     --time-content-appear: 500ms;
+    --time-footer-appear: 1000ms;
 }
 
-html, body {
+html, body, .main {
     width: 100%;
+    height: 100%;
     margin: 0;
     background-color: var(--colour-background);
+}
+
+a {
+    color: var(--colour-blue);
 }
 
 .header {
@@ -67,10 +74,54 @@ html, body {
 .decent {
     color: var(--colour-green);
 }
+
+.text-footer {
+    font-style: italic;
+    font-size: 0.75rem;
+    color: #aaaaaa;
+}
+
+.footer {
+    background-color: var(--colour-header);
+    height: 50px;
+    width: 100%;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    transform: translateY(150px);
+    animation: footer-appear var(--time-footer-appear) calc(var(--time-header-appear) + var(--time-content-appear)) forwards;
+}
+
+.footer-content, .footer-content * {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.powered {
+    height: fit-content;
+    margin-left: 5px;
+}
+
 @media (max-width: 768px) {
     .select-menu-list li:not(:last-child) {
         border-bottom: 1px solid white;
         padding: 5px 0 5px 0;
+    }
+
+    .footer-content * {
+        display: inline-block;
+        width: 50%;
+        height: fit-content;
+    }
+
+    .gh-pages {
+        display: none;
     }
 }
 
@@ -82,23 +133,12 @@ html, body {
 
 @keyframes content-appear {
     100% {
-        opacity: 1
+        opacity: 1;
     }
 }
 
-
-/* .select-menu-list li {
-    display: inline-block;
-} */
-
-/* .home {
-    grid-column: 1;
+@keyframes footer-appear {
+    100% {
+        transform: translateY(100px);
+    }
 }
-
-.projects {
-    grid-column: 2/6;
-}
-
-.contact {
-    grid-column: 6;
-} */
