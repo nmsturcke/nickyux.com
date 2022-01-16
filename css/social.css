@@ -17,7 +17,19 @@ html, body, .main {
     background-color: var(--colour-background);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+}
+
+/* Scroolbars */
+
+/* Chrome, Safari, Opera */
+html, body, .main::-webkit-scrollbar {
+    display: none;
+}
+
+/* IE, Edge, Firefox */
+html, body, .main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 a {
