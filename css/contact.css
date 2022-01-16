@@ -23,7 +23,7 @@ html, body, .main {
 /* Scroolbars */
 
 /* Chrome, Safari, Opera */
-html, body, .main::-webkit-scrollbar {
+html::-webkit-scrollbar, body::-webkit-scrollbar, .main::-webkit-scrollbar {
     display: none;
 }
 
