@@ -1,0 +1,172 @@
+:root {
+    --time-select-menu: 1000ms;
+    --time-hamburger: 1000ms;
+}
+
+.hamburger-wrapper {
+    position: absolute;
+    z-index: 1;
+}
+
+.hamburger {
+    cursor: pointer;
+    transform: translateY(-10px);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.hamburger::before, .hamburger::after {
+    inset: 0;
+    background-color: white;
+    border-radius: 1px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    top: 12px;
+}
+
+.select-menu-list {
+    transform: translateY(-1000px);
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5 ease;
+    transition: all .5 ease;
+}
+
+.select-menu-list.active {
+    display: flex;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5 ease;
+    transition: all .5 ease;
+    animation: select-menu var(--time-select-menu) forwards;
+}
+
+.select-menu-list.hidden {
+    display: flex;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5 ease;
+    transition: all .5 ease;
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    animation: unselect-menu var(--time-select-menu) forwards;
+}
+
+.hamburger.active {
+    animation: hamburger var(--time-hamburger) forwards;
+}
+
+#hamburger.active::before {
+    animation: hamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.active::after {
+    animation: hamburger-after var(--time-hamburger) forwards;
+}
+
+.hamburger.hidden {
+    transform: translateY(7px);
+    animation: unhamburger var(--time-hamburger) forwards;
+}
+
+#hamburger.hidden::before {
+    transform: rotate(45deg);
+    animation: unhamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.hidden::after {
+    transform: translateY(-6px) rotate(-45deg);
+    animation: unhamburger-after var(--time-hamburger) forwards;
+}
+
+.select-menu-list{
+    list-style: none;
+    /* display: grid;
+    grid-template: repeat(6, 1fr); */
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.select-menu-list li:hover {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+@keyframes select-menu {
+    0% {
+        transform: translateY(-1000px);
+        max-height: 0;
+    }
+    10% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes unselect-menu {
+    0% {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-1000px);
+        max-height: 0;
+    }
+}
+
+@keyframes hamburger {
+    100% {
+        transform: translateY(7px);
+    }
+}
+@keyframes hamburger-before {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes hamburger-after {
+    100% {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+@keyframes unhamburger {
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes unhamburger-before {
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes unhamburger-after {
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
