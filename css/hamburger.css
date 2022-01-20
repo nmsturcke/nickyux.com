@@ -19,7 +19,7 @@
 
 .hamburger::before, .hamburger::after {
     inset: 0;
-    background-color: white;
+    background-color: lightgrey;
     border-radius: 1px;
     content: "";
     height: 2px;
@@ -144,12 +144,14 @@
 @keyframes hamburger-before {
     100% {
         transform: rotate(45deg);
+        background-color: white;
     }
 }
 
 @keyframes hamburger-after {
     100% {
         transform: translateY(-6px) rotate(-45deg);
+        background-color: white;
     }
 }
 
@@ -162,11 +164,13 @@
 @keyframes unhamburger-before {
     100% {
         transform: rotate(0);
+        background-color: lightgrey;
     }
 }
 
 @keyframes unhamburger-after {
     100% {
         transform: translateY(0) rotate(0);
+        background-color: lightgrey;
     }
 }
