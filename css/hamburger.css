@@ -126,7 +126,10 @@
         opacity: 1;
         transform: translateY(0);
     }
-    90% {
+    60% {
+        max-height: 0;
+    }
+    80% {
         transform: translateY(-10px);
         opacity: 0;
     }
