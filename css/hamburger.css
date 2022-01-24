@@ -1,4 +1,8 @@
 :root {
+    --colour-light-hamburger: black;
+    --colour-hamburger: white;
+    --colour-active-light-hamburger: white;
+    --colour-active-hamburger: white;
     --time-select-menu: 1000ms;
     --time-hamburger: 1000ms;
 }
@@ -6,6 +10,7 @@
 .hamburger-wrapper {
     position: absolute;
     z-index: 1;
+    margin-left: 10px;
 }
 
 .hamburger {
@@ -14,17 +19,20 @@
     width: 20px;
     height: 20px;
     position: relative;
-    margin-left: 10px;
 }
 
 .hamburger::before, .hamburger::after {
     inset: 0;
-    background-color: lightgrey;
+    background-color: var(--colour-light-hamburger);
     border-radius: 1px;
     content: "";
     height: 2px;
     position: absolute;
     width: 20px;
+}
+
+body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
+    background-color: var(--colour-hamburger)
 }
 
 .hamburger::before {
@@ -38,24 +46,15 @@
 .select-menu-list {
     transform: translateY(-1000px);
     opacity: 0;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5 ease;
-    transition: all .5 ease;
 }
 
 .select-menu-list.active {
     display: flex;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5 ease;
-    transition: all .5 ease;
     animation: select-menu var(--time-select-menu) forwards;
 }
 
 .select-menu-list.hidden {
     display: flex;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5 ease;
-    transition: all .5 ease;
     max-height: 300px;
     opacity: 1;
     transform: translateY(0);
@@ -147,14 +146,12 @@
 @keyframes hamburger-before {
     100% {
         transform: rotate(45deg);
-        background-color: white;
     }
 }
 
 @keyframes hamburger-after {
     100% {
         transform: translateY(-6px) rotate(-45deg);
-        background-color: white;
     }
 }
 
@@ -167,13 +164,11 @@
 @keyframes unhamburger-before {
     100% {
         transform: rotate(0);
-        background-color: lightgrey;
     }
 }
 
 @keyframes unhamburger-after {
     100% {
         transform: translateY(0) rotate(0);
-        background-color: lightgrey;
     }
 }

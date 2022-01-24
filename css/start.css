@@ -1,0 +1,130 @@
+:root {
+    --colour-light-background: #e0e0e0;
+    --colour-light-header: #bebebe;
+    --colour-background: #525252;
+    --colour-header: #2c2c2c;
+    --colour-magenta: #E5097F;
+    --colour-green: #28b463;
+    --colour-blue: #6495ED;
+    --time-delay: 1000ms;
+    --time-content-appear: 1500ms;
+    --time-social-appear: 1000ms;
+    --time-goto-appear: 1500ms;
+    --time-content-disappear: 2500ms;
+    --time-social-disappear: 1000ms;
+}
+
+html, body, .main {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--colour-light-background);
+    color: black;
+}
+
+body.dark-mode {
+    background-color: var(--colour-background);
+    color: white;
+}
+
+/* Scroolbars */
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar, body::-webkit-scrollbar, .main::-webkit-scrollbar {
+    display: none;
+}
+
+/* IE, Edge, Firefox */
+html, body, .main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.contact {
+    cursor: pointer;
+}
+
+.goto {
+    display: flex;
+    background-color: #525252;
+    color: white;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(0, -500px);
+}
+
+.goto h2 {
+    margin: 0;
+}
+
+body.active .goto {
+    animation: goto-appear var(--time-goto-appear) var(--time-content-disappear) forwards;
+}
+
+.title {
+    margin-bottom: 100px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    transform: translate(-100%, -100px);
+    animation: content-appear var(--time-content-appear) var(--time-delay) forwards;
+}
+
+.social-media {
+    transform: translate(100%);
+    text-align: center;
+    animation: social-appear var(--time-social-appear) calc(var(--time-content-appear) + var(--time-delay)) forwards;
+}
+
+body.active .title {
+    transform: translate(0);
+    animation: content-disappear var(--time-content-disappear) forwards;
+}
+
+body.active .social-media {
+    transform: translate(0);
+    animation: social-disappear var(--time-social-disappear) var(--time-content-disappear) forwards;
+}
+
+@keyframes goto-appear {
+    100% {
+        transform: translate(0);
+    }
+}
+@keyframes content-appear {
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes social-appear {
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes content-disappear {
+    100% {
+        transform: translate(100%);
+    }
+}
+
+@keyframes social-disappear {
+    100% {
+        transform: translate(0, 25%);
+    }
+}

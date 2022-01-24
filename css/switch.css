@@ -1,0 +1,134 @@
+:root {
+    --time-rotate: 2000ms;
+    --time-colour-change: 1000ms;
+    --colour-light: lightskyblue;
+    --colour-dark: black;
+}
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+body.dark-mode {
+    background-color: darkgray;
+} */
+
+.switch-wrapper {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    width: fit-content;
+    padding: 0;
+}
+
+.switch {
+    position: relative;
+    background-color: var(--colour-light);
+    border-radius: 100px;
+    border: none;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+body.dark-mode .switch {
+    background: var(--colour-dark);
+}
+
+.switch::before {
+    display: none;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: var(--colour-dark);
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -120%);
+}
+
+.switch::after {
+    display: none;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: var(--colour-light);
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-120%, -50%);
+}
+
+body.dark-mode .switch.active::before {
+    display: block;
+    animation: rotate var(--time-rotate) linear forwards;
+}
+body.dark-mode .switch.active::after {
+    display: none;
+}
+
+body .switch.active::before {
+    display: none;
+}
+body .switch.active::after {
+    display: block;
+    animation: rotate var(--time-rotate) linear forwards;
+}
+
+body .switch.active {
+    background-color: var(--colour-dark);
+    animation: colour-light var(--time-colour-change) var(--time-rotate) forwards
+}
+body.dark-mode .switch.active {
+    background-color: var(--colour-light);
+    animation: colour-dark var(--time-colour-change) var(--time-rotate) forwards
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -120%);
+    }
+    12.5% {
+        transform: translate(0px, -100%);
+    }
+    25% {
+        transform: translate(20%, -70%);
+    }
+    37.5% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-50%, 20%)
+    }
+    62.5% {
+        transform: translate(-100%, 0px);
+    }
+    75% {
+        transform: translate(-120%, -50%);
+    }
+    87.5% {
+        transform: translate(-100%, -100%);
+    }
+    100% {
+        transform: translate(-50%, -120%);
+    }
+}
+
+@keyframes colour-light {
+    100% {
+        background-color: var(--colour-light);
+    }
+}
+
+@keyframes colour-dark {
+    100% {
+        background-color: var(--colour-dark);
+    }
+}
