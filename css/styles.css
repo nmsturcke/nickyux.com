@@ -19,9 +19,9 @@ html, body, .main {
     margin: 0;
     display: flex;
     flex-direction: column;
-    -webkit-transition: all 2000ms ease;
-    -moz-transition: all 2000ms ease;
-    transition: 2000ms ease;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: 250ms ease;
 }
 
 body {
