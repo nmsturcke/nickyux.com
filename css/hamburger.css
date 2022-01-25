@@ -7,6 +7,12 @@
     --time-hamburger: 1000ms;
 }
 
+* {
+    -webkit-transition: all 2000ms ease;
+    -moz-transition: all 2000ms ease;
+    transition: 2000ms ease;
+}
+
 .hamburger-wrapper {
     position: absolute;
     z-index: 1;
