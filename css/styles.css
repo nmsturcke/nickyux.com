@@ -153,6 +153,7 @@ body.dark-mode .footer {
 /* Social & Contact */
 .contact-methods {
     display: flex;
+    margin: 0;
 }
 
 .socialmedia-logo {
