@@ -14,6 +14,12 @@
     --time-social-disappear: 1000ms;
 }
 
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 html, body, .main {
     width: 100%;
     height: 100%;
@@ -48,9 +54,20 @@ html, body, .main {
     scrollbar-width: none;
 }
 
+.welcome, .goto, .title, .social-media {
+    z-index: 1;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
 .welcome {
     position: absolute;
     top: 50px;
+    color: white;
 }
 
 .contact {
@@ -59,7 +76,7 @@ html, body, .main {
 
 .goto {
     display: flex;
-    background-color: #525252;
+    background-color: rgba(82, 82, 82, 0.8);
     color: white;
     border-radius: 5px;
     padding-top: 5px;
@@ -70,6 +87,7 @@ html, body, .main {
     align-items: center;
     cursor: pointer;
     transform: translate(0, -500px);
+    padding-bottom: 10px;
 }
 
 .goto h2 {
@@ -81,18 +99,35 @@ body.active .goto {
 }
 
 .title {
+    cursor: pointer;
     margin-bottom: 100px;
     height: fit-content;
-    width: 100%;
+    width: 300px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
     text-align: center;
-    transform: translate(-100%, -100px);
+    transform: translate(-1000%, -100px);
     animation: content-appear var(--time-content-appear) var(--time-delay) forwards;
 }
 
 .social-media {
-    transform: translate(100%);
+    width: 50%;
+    transform: translate(1000%);
     text-align: center;
     animation: social-appear var(--time-social-appear) calc(var(--time-content-appear) + var(--time-delay)) forwards;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.contact {
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 body.active .title {
@@ -124,7 +159,7 @@ body.active .social-media {
 
 @keyframes content-disappear {
     100% {
-        transform: translate(100%);
+        transform: translate(1200%);
     }
 }
 

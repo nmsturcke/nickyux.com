@@ -17,6 +17,10 @@
 </head>
 <body>
     <div class="main">
+        <canvas id="background">
+            
+        </canvas>
+        
         <div class="welcome">
             <h2>Welcome!</h1>
         </div>
@@ -24,31 +28,35 @@
         <div id="goto" class="goto"">
             <h2>Go to main page</h2>
         </div>
-        <div class="title">
+        <div id="title" class="title">
             <h1>Nickyux</h1>
             <h4>My personal website</h4>
         </div>
-        <div class="social-media container-fluid row">
-            <div class="contact contact-discord col-md-4 col-xs-12" onclick="window.location.href = 'https://discord.com/users/427146305651998721';">
+        <div class="social-media container-fluid">
+            <div class="contact contact-discord " onclick="window.location.href = 'https://discord.com/users/427146305651998721';">
                 <div class="socialmedia-logo">
                     <img src="img/discord.png" style="height: 50px; width: 50px;">
                 </div>
                 <h4>Discord</h4>
             </div>
-            <div class="contact contact-twitter col-md-4 col-xs-12" onclick="window.location.href = 'https://twitter.com/nickyux3003';">
+            <div class="contact contact-twitter " onclick="window.location.href = 'https://twitter.com/nickyux3003';">
                 <div class="socialmedia-logo">
                     <img src="img/twitter.png" style="height: 50px; width: 50px;">
                 </div>
                 <h4>Twitter</h4>
             </div>
-            <div class="contact contact-github col-md-4 col-xs-12" onclick="window.location = 'https://github.com/nmsturcke'">
+            <div class="contact contact-github " onclick="window.location = 'https://github.com/nmsturcke'">
                 <div class="socialmedia-logo">
                     <img src="img/github.png" style="height: 50px; width: 50px;">
                 </div>
                 <h4>Github</h4>
             </div>
         </div>
+        
     </div>
+    <!-- <script src="js/start.js"></script> -->
+    
+    <script type="module" src="js/three.js"></script>
     <script src="js/start.js"></script>
 </body>
 </html>
