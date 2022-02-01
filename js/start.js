@@ -8,6 +8,10 @@ document.getElementById("goto").addEventListener("click", () => {
     window.location.replace("/");
 })
 
+document.getElementById("title").addEventListener("click", () => {
+    window.location.replace("/");
+})
+
 setTimeout( () => {
     document.body.classList.add("active")
 }, 7500)
