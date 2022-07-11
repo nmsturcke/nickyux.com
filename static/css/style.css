@@ -5,10 +5,23 @@
     --color-header: #2e0044;
     --color-outer-logo: #A36AFF;
     --color-letter-logo: #fff;
+    --color-green: #28B463;
+    --color-dark-green: #0d2a00;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Uni-Sans";
+    src: url("../fonts/Uni-Sans.otf");
 }
 
 * {
     color: white;
+    font-family: "Lato";
 }
 
 a {
@@ -73,12 +86,19 @@ html, body {
     stroke: var(--color-outer-logo);
     stroke-dasharray: 1294.5185546875;
     stroke-dashoffset: 1294.5185546875;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
 }
+
 #loading-logo-path-2 {
     stroke: var(--color-letter-logo);
     stroke-width: 15px;
     stroke-dasharray: 892.8663330078125;
     stroke-dashoffset: 892.8663330078125;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
 }
 
 .loading-logo-path.active {
@@ -118,6 +138,15 @@ html, body {
     width: 65px;
 }
 
+.logo-header-img:hover g #loading-logo-path-1 {
+    stroke: var(--color-letter-logo)
+}
+
+.logo-header-img:hover g #loading-logo-path-2 {
+    stroke: var(--color-outer-logo)
+}
+
+
 .navbar-wrapper, .navbar {
     display: inline-flex;
     align-items: center;
@@ -134,15 +163,22 @@ html, body {
 }
 
 .top {
-    height: 500px;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#abovetitle {
-    font-size: 0.8em;
+.title {
+    width: 80%;
+    padding: 10px 10px;
+}
+
+#pretitle {
+    font-size: 1.5em;
     padding-left: 10px;
+    color: var(--color-green);
+    font-family: "Uni-Sans";
 }
 
 #title {
@@ -151,6 +187,7 @@ html, body {
 
 #subtitle {
     font-size: 3em;
+    color: #ccc;
 }
 
 @keyframes drawline {

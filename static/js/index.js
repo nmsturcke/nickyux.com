@@ -40,6 +40,7 @@ function loading() {
 
 function noLoading() {
     loadingBody.remove();
+    activate()
 }
 
 function activate() {
@@ -50,4 +51,4 @@ function activate() {
 }
 
 loading();
-// noLoading();
+noLoading();
