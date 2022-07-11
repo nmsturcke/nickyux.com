@@ -51,4 +51,4 @@ function activate() {
 }
 
 loading();
-noLoading();
+// noLoading();
