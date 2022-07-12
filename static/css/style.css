@@ -311,13 +311,13 @@ html, body {
 
 @keyframes removeletter {
     to {
-        transform: rotate(180deg) scale(70%);
+        transform: rotate(179deg) scale(70%); /*Safari limitation*/
     }
 }
 
 @keyframes spin {
     to {
-        transform: rotate(180deg);
+        transform: rotate(179deg); /*Safari limitation*/
     }
 }
 
