@@ -1,21 +1,26 @@
 :root {
-    --colour-light-hamburger: black;
-    --colour-hamburger: white;
-    --colour-active-light-hamburger: white;
-    --colour-active-hamburger: white;
+    --colour-hamburger: var(--color-outer-logo);
     --time-select-menu: 1000ms;
     --time-hamburger: 1000ms;
 }
 
-.hamburger-wrapper {
+/* .hamburger-wrapper {
     position: absolute;
     z-index: 1;
-    margin-left: 10px;
+    right: 30px;
+} */
+
+.hamburger-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
 }
 
 .hamburger {
     cursor: pointer;
-    transform: translateY(-10px);
     width: 20px;
     height: 20px;
     position: relative;
@@ -23,7 +28,7 @@
 
 .hamburger::before, .hamburger::after {
     inset: 0;
-    background-color: var(--colour-light-hamburger);
+    background-color: var(--colour-hamburger);
     border-radius: 1px;
     content: "";
     height: 2px;
@@ -43,13 +48,22 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     top: 12px;
 }
 
+.select-menu {
+    height: 80px;
+    padding: 0;
+}
+
 .select-menu-list {
     transform: translateY(-1000px);
     opacity: 0;
+    background: var(--color-background-darker);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .select-menu-list.active {
-    display: flex;
     animation: select-menu var(--time-select-menu) forwards;
 }
 
@@ -57,13 +71,28 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     display: flex;
     max-height: 300px;
     opacity: 1;
-    transform: translateY(0);
     animation: unselect-menu var(--time-select-menu) forwards;
 }
 
-.hamburger.active {
-    animation: hamburger var(--time-hamburger) forwards;
+.select-menu-item {
+    height: 30px;
+    padding: 2px 5px;
 }
+
+.select-menu-item:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+.select-menu-item button {
+    color: white;
+}
+.select-menu-item button:hover {
+    color: rgb(255, 195, 79);
+}
+
+/* .hamburger.active {
+    animation: hamburger var(--time-hamburger) forwards;
+} */
 
 #hamburger.active::before {
     animation: hamburger-before var(--time-hamburger) forwards;
@@ -73,10 +102,10 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     animation: hamburger-after var(--time-hamburger) forwards;
 }
 
-.hamburger.hidden {
+/* .hamburger.hidden {
     transform: translateY(7px);
     animation: unhamburger var(--time-hamburger) forwards;
-}
+} */
 
 #hamburger.hidden::before {
     transform: rotate(45deg);
@@ -140,9 +169,10 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 @keyframes hamburger {
     100% {
-        transform: translateY(7px);
+        transform: translateY(0);
     }
 }
+
 @keyframes hamburger-before {
     100% {
         transform: rotate(45deg);
@@ -157,7 +187,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 @keyframes unhamburger {
     100% {
-        transform: translateY(-10px);
+        transform: translateY(0);
     }
 }
 

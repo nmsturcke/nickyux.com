@@ -30,6 +30,7 @@ function slideUpLoadingBody() {
 };
 
 function loading() {
+    if (window.location.href.includes("#")) {noLoading()}
     for(let i=0; i<loadingLogoPaths.length; i++) {console.log(loadingLogoPaths[i].getTotalLength())};
     setTimeout( () => {for(let i=0; i<loadingLogoPaths.length; i++) {loadingLogoPaths[i].classList.add("active")}}, loadingLogoAppearDelay);
     setTimeout( () => {loadingLogo.classList.add("disappear")}, loadingDisappearDelay);
