@@ -99,6 +99,9 @@ html, body {
     stroke: var(--color-outer-logo);
     stroke-dasharray: 1294.5185546875;
     stroke-dashoffset: 1294.5185546875;
+}
+
+#loading-logo-path-1.transition {
     transition: all .5s;
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
@@ -113,6 +116,9 @@ html, body {
     stroke-width: 15px;
     stroke-dasharray: 892.8663330078125;
     stroke-dashoffset: 892.8663330078125;
+}
+
+#loading-logo-path-2.transition {
     transition: all .5s;
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
@@ -201,7 +207,10 @@ html, body {
 
 .logo-header-img:hover g #loading-logo-path-2 {
     /* stroke: var(--color-outer-logo) */
-    stroke-width: 30px;;
+    /* stroke-dasharray: 0; */
+    stroke-dashoffset: 0;
+    stroke-width: 30px;
+    animation: spin .3s linear forwards;
 }
 
 
@@ -268,7 +277,13 @@ html, body {
 
 @keyframes removeletter {
     to {
-        transform: rotate(360deg) scale(70%);
+        transform: rotate(180deg) scale(70%);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(180deg);
     }
 }
 

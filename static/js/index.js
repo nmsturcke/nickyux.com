@@ -8,9 +8,9 @@ const header = document.querySelector("[data-header]")
 const loadingLogoAppearDelay = 1000
 const loadingDisappearDelay = loadingLogoAppearDelay + 2000
 const loadingDisplayNoneDelay = loadingDisappearDelay + 1700
-const loadingSlideUpDelay = loadingDisplayNoneDelay + 200
+const loadingSlideUpDelay = loadingDisplayNoneDelay + 0
 const loadingSlideUpTime = 500
-const activeAppearDelay = loadingSlideUpDelay + 1000
+const activeAppearDelay = loadingSlideUpDelay + 700
 
 function slideUpLoadingBody() {
     let frames = 1 / loadingSlideUpTime
