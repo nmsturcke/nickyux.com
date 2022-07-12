@@ -102,16 +102,14 @@ html, body {
 .loading-logo-path {
     stroke-width: 10px;
     fill: none;
-    /* stroke-dasharray: 1294.5;
-    stroke-dashoffset: 1294.5; */
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 #loading-logo-path-1 {
     stroke: var(--color-outer-logo);
-    stroke-dasharray: 1294.5185546875;
-    stroke-dashoffset: 1294.5185546875;
+    stroke-dasharray: 1294.1;
+    stroke-dashoffset: 3883.53;
 }
 
 #loading-logo-path-1.transition {
@@ -127,8 +125,8 @@ html, body {
     transform-origin: 50% 50%;
     stroke: var(--color-letter-logo);
     stroke-width: 15px;
-    stroke-dasharray: 892.8663330078125;
-    stroke-dashoffset: 892.8663330078125;
+    stroke-dasharray: 2678.58;
+    stroke-dashoffset: 2678.58;
 }
 
 #loading-logo-path-2.transition {
@@ -137,8 +135,12 @@ html, body {
     -webkit-transition: all .5s;
 }
 
-.loading-logo-path.active {
-    animation: drawline 1s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
+#loading-logo-path-1.active {
+    animation: drawline1 1s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
+}
+
+#loading-logo-path-2.active {
+    animation: drawline2 1s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
 }
 
 .loading-logo.disappear {
@@ -146,12 +148,12 @@ html, body {
 }
 
 .loading-logo.disappear g #loading-logo-path-1 {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 2589.02;
     animation: removecircle 1s forwards;
 }
 
 .loading-logo.disappear g #loading-logo-path-2 {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1785.72;
     animation: removeletter 1s forwards;
 }
 
@@ -224,7 +226,7 @@ html, body {
 .logo-header-img:hover g #loading-logo-path-2 {
     /* stroke: var(--color-outer-logo) */
     /* stroke-dasharray: 0; */
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1785.72;
     stroke-width: 30px;
     animation: spin .3s linear forwards;
 }
@@ -285,21 +287,25 @@ html, body {
     color: #ccc;
 }
 
-@keyframes drawline {
+@keyframes drawline1 {
     to {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 2589.02;
+    }
+}
+
+@keyframes drawline2 {
+    to {
+        stroke-dashoffset: 1785.72;
     }
 }
 
 @keyframes removecircle {
     from {
-        /* stroke-dasharray: 0; */
-        /* stroke-dashoffset: 1294.5185546875; */
+        stroke-dashoffset: 2589.02;
     }
     to {
-        stroke-dashoffset: -1294.5185546875;
-        /* stroke-dashoffset:  -2598.02; */
-        /* stroke-dasharray: 1294.5185546875; */
+        /* stroke-dashoffset: 5178.08; */
+        stroke-dashoffset: 1294.52;
     }
 }
 
