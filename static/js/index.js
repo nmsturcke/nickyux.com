@@ -6,11 +6,11 @@ const elementsToAppear = document.getElementsByClassName("appear")
 const header = document.querySelector("[data-header]")
 
 const loadingLogoAppearDelay = 1000
-const loadingDisappearDelay = 2500
-const loadingDisplayNoneDelay = 3000
-const loadingSlideUpDelay = 4000
+const loadingDisappearDelay = loadingLogoAppearDelay + 2000
+const loadingDisplayNoneDelay = loadingDisappearDelay + 1700
+const loadingSlideUpDelay = loadingDisplayNoneDelay + 200
 const loadingSlideUpTime = 500
-const activeAppearDelay = 5000
+const activeAppearDelay = loadingSlideUpDelay + 1000
 
 function slideUpLoadingBody() {
     let frames = 1 / loadingSlideUpTime
@@ -44,7 +44,6 @@ function noLoading() {
 }
 
 function activate() {
-    header.classList.add("active")
     for (let i=0; i<elementsToAppear.length; i++) {
         elementsToAppear[i].classList.add("active")
     }

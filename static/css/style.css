@@ -39,22 +39,32 @@ html, body {
     scroll-behavior: smooth;
 }
 
-.appear {
-    opacity: 0;
+.anim1 {
+    transform: translateY(-80px);
 }
 
-.appear.active {
-    animation-name: appear;
+.anim1.active {
+    animation-name: anim1;
     animation-duration: 750ms;
     animation-fill-mode: forwards;
 }
 
-.appearfromtop {
-    transform: translateY(-80px);
+.anim2 {
+    opacity: 0;
 }
 
-.appearfromtop.active {
-    animation-name: appearfromtop;
+.anim2.active {
+    animation-name: anim2;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+}
+
+.anim3 {
+    transform: translateX(-100%);
+}
+
+.anim3.active {
+    animation-name: anim3;
     animation-duration: 750ms;
     animation-fill-mode: forwards;
 }
@@ -95,6 +105,10 @@ html, body {
 }
 
 #loading-logo-path-2 {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     stroke: var(--color-letter-logo);
     stroke-width: 15px;
     stroke-dasharray: 892.8663330078125;
@@ -109,7 +123,17 @@ html, body {
 }
 
 .loading-logo.disappear {
-    animation: swallow .5s cubic-bezier(0.75, -0.47, 1, 0.54) forwards;
+    animation: swallow 1s 1s linear forwards;
+}
+
+.loading-logo.disappear g #loading-logo-path-1 {
+    stroke-dashoffset: 0;
+    animation: removecircle 1s forwards;
+}
+
+.loading-logo.disappear g #loading-logo-path-2 {
+    stroke-dashoffset: 0;
+    animation: removeletter 1s forwards;
 }
 
 .main-body {
@@ -230,13 +254,38 @@ html, body {
     }
 }
 
-@keyframes swallow {
+@keyframes removecircle {
+    from {
+        /* stroke-dasharray: 0; */
+        /* stroke-dashoffset: 1294.5185546875; */
+    }
     to {
-        transform: scale(30%);
+        stroke-dashoffset: -1294.5185546875;
+        /* stroke-dashoffset:  -2598.02; */
+        /* stroke-dasharray: 1294.5185546875; */
     }
 }
 
-@keyframes appear {
+@keyframes removeletter {
+    to {
+        transform: rotate(360deg) scale(70%);
+    }
+}
+
+@keyframes swallow {
+    to {
+        transform: scale(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes anim1 {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes anim2 {
     from {
         opacity: 0;
         transform: scale(40%);
@@ -247,8 +296,8 @@ html, body {
     }
 }
 
-@keyframes appearfromtop {
+@keyframes anim3 {
     to {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
