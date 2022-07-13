@@ -33,6 +33,21 @@
     src: url("../fonts/Uni-Sans.otf");
 }
 
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../fonts/Roboto-Light.ttf")
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf")
+}
+
 * {
     color: white;
     font-family: "Lato";
@@ -41,6 +56,10 @@
 a {
     color: inherit;
     text-decoration: none;
+}
+
+a:hover {
+    color: #fcff52;
 }
 
 html, body {
@@ -272,10 +291,10 @@ html, body {
 }
 
 #pretitle {
-    font-size: 1.5em;
+    font-size: 2.5em;
     padding-left: 10px;
     color: var(--color-green);
-    font-family: "Uni-Sans";
+    font-family: "Roboto";
 }
 
 #title {
