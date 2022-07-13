@@ -127,8 +127,8 @@ html, body {
 
 #loading-logo-path-1 {
     stroke: var(--color-outer-logo);
-    stroke-dasharray: 1294.1;
-    stroke-dashoffset: 3883.53;
+    stroke-dasharray: 1294.5201416015625;
+    stroke-dashoffset: 3884;
 }
 
 #loading-logo-path-1.transition {
@@ -308,7 +308,7 @@ html, body {
 
 @keyframes drawline1 {
     to {
-        stroke-dashoffset: 2589.02;
+        stroke-dashoffset: 2588;
     }
 }
 
@@ -320,11 +320,11 @@ html, body {
 
 @keyframes removecircle {
     from {
-        stroke-dashoffset: 2589.02;
+        stroke-dashoffset: 2589;
     }
     to {
         /* stroke-dashoffset: 5178.08; */
-        stroke-dashoffset: 1294.52;
+        stroke-dashoffset: 1295;
     }
 }
 
