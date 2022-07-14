@@ -8,24 +8,19 @@
     --color-letter-logo: #fff;
     --color-green: #28B463;
     --color-dark-green: #0d2a00;
-}
-
-.mobile {
-    display: none
-}
-
-@media (max-width: 768px) {
-    .mobile {
-        display: block;
-    }
-    .pc {
-        display: none;
-    }
+    --color-text: rgba(204, 204, 204, 0.7);
+    --color-logo: rgba(235, 235, 235, 0.8);
+    --color-logo-active: rgba(40, 180, 99, 0.8);
 }
 
 @font-face {
     font-family: "Lato";
     src: url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Black";
+    src: url("../fonts/Lato-Black.ttf");
 }
 
 @font-face {
@@ -176,6 +171,54 @@ html, body {
     animation: removeletter 1s forwards;
 }
 
+.side-left {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 10vw;
+    transform: translateY(100%);
+    width: fit-content;
+}
+
+.side-left.active {
+    animation-name: anim1;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0;
+}
+
+.socials-list::after {
+    content: "";
+    inset: 0;
+    width: 2px;
+    height: 100px;
+    background-color: var(--color-logo);
+    z-index: 99;
+}
+
+.socials-logo {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 20px;
+    stroke: var(--color-logo);
+    transition: .5s;
+}
+
+.socials-logo:hover {
+    transform: scale(120%);
+    stroke: var(--color-logo-active);
+}
+
 .main-body {
     width: 100%;
     height: 100%;
@@ -283,27 +326,43 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 200px;
 }
 
-.title {
-    width: 80%;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > div {
+    width: 60%;
     padding: 10px 10px;
 }
 
 #pretitle {
-    font-size: 2.5em;
+    font-size: clamp(10px, 4vw, 40px);
     padding-left: 10px;
     color: var(--color-green);
     font-family: "Roboto";
 }
 
 #title {
-    font-size: 5em;
+    font-size: clamp(40px, 8vw, 80px);
+    font-family: "Lato-Black";
+    color: rgba(255, 255, 255, 0.9);
 }
 
 #subtitle {
+    font-size: clamp(30px, 7vw, 70px);
+    font-family: "Lato-Black";
+    color: rgba(235, 235, 355, 0.8);
+}
+
+#intro {
     font-size: 3em;
-    color: #ccc;
+    font-family: "Roboto";
+    color: var(--color-text);
 }
 
 @keyframes drawline1 {
@@ -367,5 +426,20 @@ html, body {
 @keyframes anim3 {
     to {
         transform: translateX(0);
+    }
+}
+
+
+
+.mobile {
+    display: none
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: inherit;
+    }
+    .pc {
+        display: none;
     }
 }
