@@ -242,7 +242,7 @@ html, body {
     width: 2px;
     height: 100px;
     background-color: var(--color-logo);
-    z-index: 99;
+    border-radius: 10px;
 }
 
 .socials-logo {
