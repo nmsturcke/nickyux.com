@@ -30,7 +30,7 @@ function slideUpLoadingBody() {
 };
 
 function loading() {
-    if (window.location.href.includes("#")) {noLoading()}
+    if (window.location.href.includes("#")) {noLoading(); return;}
     setTimeout( () => {for(let i=0; i<loadingLogoPaths.length; i++) {loadingLogoPaths[i].classList.add("active")}}, loadingLogoAppearDelay);
     setTimeout( () => {loadingLogo.classList.add("disappear")}, loadingDisappearDelay);
     setTimeout( () => {loadingLogo.style.display = "none"}, loadingDisplayNoneDelay);
@@ -40,14 +40,17 @@ function loading() {
 
 function noLoading() {
     loadingBody.remove();
-    activate()
+    activate(false)
 }
 
-function activate() {
+function activate(animation=true) {
     for (let i=0; i<elementsToAppear.length; i++) {
-        elementsToAppear[i].classList.add("active")
+        if (animation) {
+            elementsToAppear[i].classList.add("active")
+        } else {
+            elementsToAppear[i].classList.add("active-no-anim")
+        }
     }
 }
 
 loading();
-// noLoading();

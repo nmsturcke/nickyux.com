@@ -62,7 +62,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow: none;
+    overflow: hidden;
     scroll-behavior: smooth;
     background-color: var(--color-background);
 }
@@ -77,6 +77,13 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+.anim1.active-no-anim {
+    animation-name: anim1;
+    animation-duration: 0ms;
+    animation-delay: 0ms!important;
+    animation-fill-mode: forwards;
+}
+
 .anim2 {
     opacity: 0;
 }
@@ -87,6 +94,13 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+.anim2.active-no-anim {
+    animation-name: anim2;
+    animation-duration: 0ms;
+    animation-delay: 0ms!important;
+    animation-fill-mode: forwards;
+}
+
 .anim3 {
     transform: translateX(-100%);
 }
@@ -94,6 +108,13 @@ html, body {
 .anim3.active {
     animation-name: anim3;
     animation-duration: 750ms;
+    animation-fill-mode: forwards;
+}
+
+.anim3.active-no-anim {
+    animation-name: anim3;
+    animation-duration: 0ms;
+    animation-delay: 0ms!important;
     animation-fill-mode: forwards;
 }
 
@@ -158,6 +179,15 @@ html, body {
     animation: drawline2 1s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
 }
 
+#loading-logo-path-1.active-no-anim {
+    animation: drawline1 0s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
+}
+
+#loading-logo-path-2.active-no-anim {
+    animation: drawline2 0s cubic-bezier(0.48, 0.41, 0.25, 0.99) forwards;
+}
+
+
 .loading-logo.disappear {
     animation: swallow 1s 1s linear forwards;
 }
@@ -185,6 +215,14 @@ html, body {
 .side-left.active {
     animation-name: anim1;
     animation-duration: 750ms;
+    animation-fill-mode: forwards;
+}
+
+
+.side-left.active-no-anim {
+    animation-name: anim1;
+    animation-duration: 0ms;
+    animation-delay: 0ms!important;
     animation-fill-mode: forwards;
 }
 
@@ -434,8 +472,6 @@ section > div {
         transform: translateX(0);
     }
 }
-
-
 
 .mobile {
     display: none
