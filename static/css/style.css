@@ -385,20 +385,20 @@ section > div {
 }
 
 #pretitle {
-    font-size: clamp(10px, 4vw, 40px);
+    font-size: clamp(30px, 4vw, 40px);
     padding-left: 10px;
     color: var(--color-green);
     font-family: "Roboto";
 }
 
 #title {
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(80px, 8vw, 80px);
     font-family: "Lato-Black";
     color: rgba(255, 255, 255, 0.9);
 }
 
 #subtitle {
-    font-size: clamp(30px, 7vw, 50px);
+    font-size: clamp(40px, 7vw, 50px);
     font-family: "Lato-Black";
     color: var(--color-text);
 }
