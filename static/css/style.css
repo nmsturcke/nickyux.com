@@ -250,7 +250,7 @@ html, body {
     width: 24px;
     margin-bottom: 20px;
     stroke: var(--color-logo);
-    transition: .5s;
+    transition: .1s;
 }
 
 .socials-logo:hover {
