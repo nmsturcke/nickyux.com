@@ -380,6 +380,10 @@ section > div {
     padding: 10px 10px;
 }
 
+.section-title > h2 {
+    font-size: clamp(40px, 6vw, 60px);
+}
+
 .title {
     padding: 50px 0;
 }
