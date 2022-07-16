@@ -479,7 +479,7 @@ section > div {
 
 @media (max-width: 768px) {
     .mobile {
-        display: inherit;
+        display: block;
     }
     .pc {
         display: none;
