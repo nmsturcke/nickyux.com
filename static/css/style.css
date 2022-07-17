@@ -396,7 +396,7 @@ section > div {
 }
 
 #title {
-    font-size: clamp(80px, 8vw, 80px);
+    font-size: clamp(60px, 8vw, 80px);
     font-family: "Lato-Black";
     color: rgba(255, 255, 255, 0.9);
 }
