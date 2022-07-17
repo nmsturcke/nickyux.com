@@ -488,4 +488,8 @@ section > div {
     .pc {
         display: none;
     }
+
+    section > div {
+        width: 90%;
+    }
 }
