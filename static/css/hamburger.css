@@ -1,0 +1,204 @@
+:root {
+    --colour-hamburger: var(--color-outer-logo);
+    --time-select-menu: 1000ms;
+    --time-hamburger: 1000ms;
+}
+
+/* .hamburger-wrapper {
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+} */
+
+.hamburger-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    inset: 0;
+    background-color: var(--colour-hamburger);
+    border-radius: 1px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+
+body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
+    background-color: var(--colour-hamburger)
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    top: 12px;
+}
+
+.select-menu {
+    height: 80px;
+    padding: 0;
+}
+
+.select-menu-list {
+    transform: translateY(-1000px);
+    opacity: 0;
+    background: var(--color-background-darker);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.select-menu-list.active {
+    animation: select-menu var(--time-select-menu) forwards;
+}
+
+.select-menu-list.hidden {
+    display: flex;
+    max-height: 300px;
+    opacity: 1;
+    animation: unselect-menu var(--time-select-menu) forwards;
+}
+
+.select-menu-item {
+    height: 30px;
+    padding: 2px 5px;
+}
+
+.select-menu-item:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+.select-menu-item button {
+    color: white;
+}
+.select-menu-item button:hover {
+    color: rgb(255, 195, 79);
+}
+
+/* .hamburger.active {
+    animation: hamburger var(--time-hamburger) forwards;
+} */
+
+#hamburger.active::before {
+    animation: hamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.active::after {
+    animation: hamburger-after var(--time-hamburger) forwards;
+}
+
+/* .hamburger.hidden {
+    transform: translateY(7px);
+    animation: unhamburger var(--time-hamburger) forwards;
+} */
+
+#hamburger.hidden::before {
+    transform: rotate(45deg);
+    animation: unhamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.hidden::after {
+    transform: translateY(-6px) rotate(-45deg);
+    animation: unhamburger-after var(--time-hamburger) forwards;
+}
+
+.select-menu-list{
+    list-style: none;
+    /* display: grid;
+    grid-template: repeat(6, 1fr); */
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.select-menu-list li:hover {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+@keyframes select-menu {
+    0% {
+        transform: translateY(-1000px);
+        max-height: 0;
+    }
+    10% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes unselect-menu {
+    0% {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60% {
+        max-height: 0;
+    }
+    80% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-1000px);
+        max-height: 0;
+    }
+}
+
+@keyframes hamburger {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hamburger-before {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes hamburger-after {
+    100% {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+@keyframes unhamburger {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes unhamburger-before {
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes unhamburger-after {
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
