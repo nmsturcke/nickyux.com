@@ -207,7 +207,7 @@ html, body {
     display: flex;
     flex-direction: column;
     bottom: 0;
-    left: 10vw;
+    left: 5vw;
     transform: translateY(100%);
     width: fit-content;
 }
@@ -234,6 +234,7 @@ html, body {
     flex-direction: column;
     width: fit-content;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 .socials-list::after {
@@ -241,7 +242,7 @@ html, body {
     inset: 0;
     width: 2px;
     height: 100px;
-    background-color: var(--color-logo);
+    background-color: var(--color-text);
     border-radius: 10px;
 }
 
@@ -251,11 +252,80 @@ html, body {
     margin-bottom: 20px;
     stroke: var(--color-logo);
     transition: .1s;
+    -moz-transition: .1s;
+    -webkit-transition: .1s;
+}
+
+.socials-logo.discord > path {
+    stroke: var(--color-logo);
 }
 
 .socials-logo:hover {
     transform: scale(120%);
     stroke: var(--color-logo-active);
+}
+
+.side-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 5vw;
+    transform: translateY(100%);
+    width: fit-content;
+}
+
+.side-right.active {
+    animation-name: anim1;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+}
+
+
+.side-right.active-no-anim {
+    animation-name: anim1;
+    animation-duration: 0ms;
+    animation-delay: 0ms!important;
+    animation-fill-mode: forwards;
+}
+
+
+.email-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0;
+}
+
+.email-wrapper::after {
+    content: "";
+    inset: 0;
+    width: 2px;
+    height: 100px;
+    background-color: var(--color-text);
+    border-radius: 10px;
+}
+
+.email-text {
+    font-size: 1.5rem;
+    position: relative;
+    margin-bottom: 20px;
+    left: 2px;
+    transition: .1s;
+    -moz-transition: .1s;
+    -webkit-transition: .1s;
+    writing-mode: vertical-rl;
+    font-family: "Roboto";
+    color: var(--color-text);
+}
+
+.email-text:hover {
+    cursor: pointer;
+    color: var(--color-green);
+    transform: translateY(-5px);
 }
 
 .main-body {
