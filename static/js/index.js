@@ -38,9 +38,9 @@ function loading() {
     setTimeout( activate, activeAppearDelay)
 };
 
-function noLoading() {
+function noLoading(animation=false) {
     loadingBody.remove();
-    activate(false)
+    activate(animation)
 }
 
 function activate(animation=true) {
