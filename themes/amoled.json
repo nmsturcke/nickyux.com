@@ -1,0 +1,53 @@
+{
+    "name": "AMOLED",
+    "version": "0.0.1-alpha",
+    "description": "A dark and clean AMLOED theme for your favourite device",
+    "authors": [{"name": "Nickyux", "id": "427146305651998721"}],
+    "color": "#080808",
+    "background": {
+		"blur": "1",
+		"url": "https://i.imgur.com/sEkjODE.jpeg",
+		"alpha": "0.69"
+	},
+	"theme_color_map": {
+		"KEYBOARD": ["#000000", "#FFFFFF"],
+		"BACKGROUND_PRIMARY": ["#080808", "#FFFFFF"],
+		"BACKGROUND_SECONDARY": ["#050505", "#FFFFFF"],
+		"BACKGROUND_SECONDARY_ALT": ["#0f0f0f", "#FFFFFF"],
+		"BACKGROUND_TERTIARY": ["#000000", "#FFFFFF"],
+		"BACKGROUND_ACCENT": ["#0f0f0f", "#FFFFFF"],
+		"BACKGROUND_FLOATING": ["#000000", "#FFFFFF"],
+		"BACKGROUND_NESTED_FLOATING": ["#000000", "#FFFFFF"],
+		"BACKGROUND_MOBILE_PRIMARY": ["#080808", "#FFFFFF"],
+		"BACKGROUND_MOBILE_SECONDARY": ["#050505", "#FFFFFF"],
+		"BACKGROUND_MODIFIER_ACCENT": ["#rgba(255, 255, 255, 0.06)", "#FFFFFF"],
+		"BACKGROUND_MODIFIER_ACTIVE": ["#rgba(50, 50, 50, 0.24)", "#FFFFFF"],
+		"BACKGROUND_MODIFIER_SELECTED": ["#rgba(50, 50, 50, 0.32)", "#FFFFFF"],
+		"CHANNELS_DEFAULT": ["#969696", "#FFFFFF"],
+		"HEADER_PRIMARY": ["#b9bbbe", "#FFFFFF"],
+		"HEADER_SECONDARY": ["#000000", "#FFFFFF"],
+		"INTERACTIVE_ACTIVE": ["#ffffff", "#FFFFFF"],
+		"INTERACTIVE_MUTED": ["#4b4b4b", "#FFFFFF"],
+		"INTERACTIVE_NORMAL": ["#b9bbbe", "#FFFFFF"],
+		"TEXT_LINK": ["#00b0f4", "#FFFFFF"],
+		"TEXT_MUTED": ["#969696", "#FFFFFF"],
+		"TEXT_NORMAL": ["#dcddde", "#FFFFFF"]
+	},
+	"colours": {
+		"PRIMARY_DARK": "#000000",
+		"PRIMARY_DARK_100": "#FFFFFF",
+		"PRIMARY_DARK_300": "#FFFFFF",
+		"PRIMARY_DARK_360": "#FFFFFF",
+		"PRIMARY_DARK_400": "#FFFFFF",
+		"PRIMARY_DARK_500": "#FFFFFF",
+		"PRIMARY_DARK_600": "#FFFFFF",
+		"PRIMARY_DARK_630": "#FFFFFF",
+		"PRIMARY_DARK_700": "#FFFFFF",
+		"PRIMARY_DARK_800": "#FFFFFF",
+		"BRAND_NEW": "#acacac",
+		"WHITE": "#FFFFFF"
+	},
+	"unsafe_colors": {
+		"CHAT_GREY": "#e6e6e6"
+	}
+}
