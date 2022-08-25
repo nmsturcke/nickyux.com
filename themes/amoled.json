@@ -1,14 +1,9 @@
 {
     "name": "AMOLED",
     "version": "0.0.1-alpha",
-    "description": "A dark and clean AMLOED theme for your favourite device",
+    "description": "A dark and clean AMOLED theme for your favourite device",
     "authors": [{"name": "Nickyux", "id": "427146305651998721"}],
     "color": "#080808",
-    "background": {
-		"blur": "1",
-		"url": "https://i.imgur.com/sEkjODE.jpeg",
-		"alpha": "0.69"
-	},
 	"theme_color_map": {
 		"KEYBOARD": ["#000000", "#FFFFFF"],
 		"BACKGROUND_PRIMARY": ["#080808", "#FFFFFF"],
