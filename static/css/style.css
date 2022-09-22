@@ -47,6 +47,9 @@
     color: white;
     font-family: "Lato";
 }
+*:focus {
+    outline-color: var(--color-outer-logo);
+}
 
 a {
     color: inherit;
@@ -281,6 +284,24 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+.skip-navigation {
+    /* position: absolute; */
+    z-index: 100;
+    padding-right: 0;
+    max-width: 0;
+    transition: all 1s;
+    opacity: 0;
+    padding: 2px 5px;
+    background-color: var(--color-green);
+    border-radius: 5px;
+    outline-color: var(--color-outer-logo);
+    outline-style:groove;
+}   
+.skip-navigation:focus {
+    max-width: none;
+    margin-right: 10px;
+    opacity: 1;
+}
 
 .side-right.active-no-anim {
     animation-name: anim1;
@@ -379,8 +400,10 @@ html, body {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     height: 100%;
+    padding-left: 50px;
+    flex-direction: row;
     /* min-width: 65px; */
     /* margin-left: 5px; */
 }
@@ -481,6 +504,10 @@ section > div {
     font-size: 3em;
     font-family: "Roboto";
     color: var(--color-text);
+}
+
+#content, #about-me {
+    width: 100%;
 }
 
 @keyframes drawline1 {
