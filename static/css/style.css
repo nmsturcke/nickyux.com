@@ -11,6 +11,9 @@
     --color-text: rgba(204, 204, 204, 0.7);
     --color-logo: rgba(235, 235, 235, 0.8);
     --color-logo-active: rgba(40, 180, 99, 0.8);
+    --colour-hamburger: var(--color-outer-logo);
+    --time-select-menu: 1000ms;
+    --time-hamburger: 1000ms;
 }
 
 @font-face {
@@ -386,14 +389,16 @@ html, body {
   }
 
 .header {
-    z-index: 0;
+    z-index: 1;
     margin: 0;
-    width: 100;
+    width: 100%;
     height: 80px;
     background-color: var(--color-header);
     box-shadow: 0 3px 25px var(--color-header);
     padding: 0 15px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .logo-header {
@@ -404,8 +409,15 @@ html, body {
     height: 100%;
     padding-left: 50px;
     flex-direction: row;
+    width: fit-content;
+    justify-self: start;
     /* min-width: 65px; */
     /* margin-left: 5px; */
+}
+@media (max-width: 768px) {
+    .logo-header {
+        padding-left: 10px;
+    }
 }
 
 .logo-header-img {
@@ -431,6 +443,8 @@ html, body {
     align-items: center;
     list-style: none;
     height: 100%;
+    justify-self: end;
+    margin-left: auto;
 }
 
 
@@ -442,11 +456,12 @@ html, body {
 
 .navbar {
     padding-right: 15px;
+    width: fit-content;
+    margin: 0;
 }
 
-.navbar {
-    width: 100%;
-    margin: 0;
+.navbar-item {
+    margin-left: 40px;
 }
 
 .select-menu {
@@ -589,4 +604,150 @@ section > div {
     section > div {
         width: 90%;
     }
+}
+
+/* Hamburger */
+
+
+.hamburger-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    inset: 0;
+    background-color: var(--colour-hamburger);
+    border-radius: 1px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+
+body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
+    background-color: var(--colour-hamburger)
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    top: 12px;
+}
+
+
+#hamburger.active::before {
+    animation: hamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.active::after {
+    animation: hamburger-after var(--time-hamburger) forwards;
+}
+
+/* .hamburger.hidden {
+    transform: translateY(7px);
+    animation: unhamburger var(--time-hamburger) forwards;
+} */
+
+#hamburger.hidden::before {
+    transform: rotate(45deg);
+    animation: unhamburger-before var(--time-hamburger) forwards;
+}
+
+#hamburger.hidden::after {
+    transform: translateY(-6px) rotate(-45deg);
+    animation: unhamburger-after var(--time-hamburger) forwards;
+}
+
+@keyframes hamburger {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hamburger-before {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes hamburger-after {
+    100% {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+@keyframes unhamburger {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes unhamburger-before {
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes unhamburger-after {
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* Mobile Navigation */
+
+.mobile-navigation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* transform: translateX(100%); */
+    opacity: 0;
+    z-index: 999;
+    background-color: var(--color-background-darker);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mobile-navigation.active {
+    opacity: 1;
+}
+
+.mobilenav-header {
+    z-index: 1000;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-header);
+    box-shadow: 0 3px 25px var(--color-header);
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mobilenav-icon {
+    min-width: 52px;
+    height: 52px;
+    border-radius: 52px;
+    border: 1px solid var(--color-outer-logo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 30px;
+    margin-left: 17px;
 }
