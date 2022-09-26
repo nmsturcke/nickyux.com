@@ -2,7 +2,6 @@
     --color-background: #1d002a;
     --color-background-darker: #14001d;
     --color-loading: #350448;
-    /* --color-header: white; */
     --color-header: #2e0044;
     --color-outer-logo: #A36AFF;
     --color-letter-logo: #fff;
@@ -54,23 +53,38 @@
     outline-color: var(--color-outer-logo);
 }
 
+.btn-unstyled {
+    padding: none!important;
+    background: none!important;
+    color: inherit;
+    border: none!important;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-a:hover {
+a:hover, .a:hover {
     color: #fcff52;
 }
-
+html {
+    height: 100vh;
+}
 html, body {
     width: 100%;
-    height: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
     scroll-behavior: smooth;
     background-color: var(--color-background);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body.no-scroll {
+    overflow: hidden;
 }
 
 .anim1 {
@@ -288,7 +302,6 @@ html, body {
 }
 
 .skip-navigation {
-    /* position: absolute; */
     z-index: 100;
     padding-right: 0;
     max-width: 0;
@@ -356,7 +369,6 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: var(--color-background);
-    overflow: auto;
     scroll-behavior: smooth;
 }
 
@@ -365,6 +377,7 @@ html, body {
     width: 7px;
     border-radius: 10px;
     transition: .5s;
+    z-index: 2000;
   }
   
   /* Track */
@@ -372,6 +385,7 @@ html, body {
     background: var(--color-background-darker);
     border-radius: 10px;
     transition: .5s;
+    z-index: 2000;
   }
   
   /* Handle */
@@ -379,6 +393,7 @@ html, body {
     background: rgba(245, 245, 245, 0.1);
     border-radius: 10px;
     transition: .5s;
+    z-index: 2000;
   }
   
   /* Handle on hover */
@@ -386,19 +401,21 @@ html, body {
     background: rgba(245, 245, 245, 0.25);
     border-radius: 10px;
     transition: .5s;
+    z-index: 2000;
   }
 
 .header {
     z-index: 1;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     background-color: var(--color-header);
     box-shadow: 0 3px 25px var(--color-header);
     padding: 0 15px;
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
+    top: 0;
 }
 
 .logo-header {
@@ -411,8 +428,6 @@ html, body {
     flex-direction: row;
     width: fit-content;
     justify-self: start;
-    /* min-width: 65px; */
-    /* margin-left: 5px; */
 }
 @media (max-width: 768px) {
     .logo-header {
@@ -430,8 +445,6 @@ html, body {
 }
 
 .logo-header-img:hover g #loading-logo-path-2 {
-    /* stroke: var(--color-outer-logo) */
-    /* stroke-dasharray: 0; */
     stroke-dashoffset: 1785.72;
     stroke-width: 30px;
     animation: spin .3s linear forwards;
@@ -542,7 +555,6 @@ section > div {
         stroke-dashoffset: 2589;
     }
     to {
-        /* stroke-dashoffset: 5178.08; */
         stroke-dashoffset: 1295;
     }
 }
@@ -623,6 +635,7 @@ section > div {
     width: 20px;
     height: 20px;
     position: relative;
+    z-index: 1999;
 }
 
 .hamburger::before, .hamburger::after {
@@ -655,11 +668,6 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 #hamburger.active::after {
     animation: hamburger-after var(--time-hamburger) forwards;
 }
-
-/* .hamburger.hidden {
-    transform: translateY(7px);
-    animation: unhamburger var(--time-hamburger) forwards;
-} */
 
 #hamburger.hidden::before {
     transform: rotate(45deg);
@@ -710,12 +718,14 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 /* Mobile Navigation */
 
 .mobile-navigation {
-    position: absolute;
+    position: fixed;
+    top: 80px;
     width: 100%;
-    height: 100%;
-    /* transform: translateX(100%); */
-    opacity: 0;
-    z-index: 999;
+    height: calc(100% - 80px);
+    transform: translateX(100%);
+    right: -100%;
+    opacity: 0.5;
+    z-index: -1;
     background-color: var(--color-background-darker);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -724,19 +734,9 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 .mobile-navigation.active {
     opacity: 1;
-}
-
-.mobilenav-header {
     z-index: 1000;
-    margin: 0;
-    width: 100%;
-    height: 80px;
-    background-color: var(--color-header);
-    box-shadow: 0 3px 25px var(--color-header);
-    padding: 0 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
+    right: 0;
+    transform: translateX(0)
 }
 
 .mobilenav-icon {
@@ -750,4 +750,25 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     padding: 0;
     font-size: 30px;
     margin-left: 17px;
+}
+
+.mobilenav-content-wrapper, .mobilenav-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mobilenav-content {
+    margin: 20px 30px;
+    width: 90%;
+}
+
+.mobilenav {
+    font-size: 2em!important;
+}
+
+.mobilenav-li:not(:last-child) {
+    margin-bottom: 10px;
 }
