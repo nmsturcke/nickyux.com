@@ -53,4 +53,4 @@ function activate(animation=true) {
     }
 }
 
-noLoading();
+loading();
