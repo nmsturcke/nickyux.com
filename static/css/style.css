@@ -728,9 +728,9 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     opacity: 0.5;
     z-index: -1;
     background-color: var(--color-background-darker);
-    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
 }
 
 .mobile-navigation.active {
