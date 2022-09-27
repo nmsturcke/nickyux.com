@@ -222,7 +222,7 @@ body.no-scroll {
 }
 
 .side-left {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     bottom: 0;
@@ -285,7 +285,7 @@ body.no-scroll {
 }
 
 .side-right {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     bottom: 0;
