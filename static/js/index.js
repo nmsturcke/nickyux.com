@@ -53,4 +53,8 @@ function activate(animation=true) {
     }
 }
 
+function scrollTo(query) {
+    document.querySelector(query).scrollIntoView()
+}
+
 loading();
