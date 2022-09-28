@@ -7,7 +7,8 @@
     --color-letter-logo: #fff;
     --color-green: #28B463;
     --color-dark-green: #0d2a00;
-    --color-text: rgba(204, 204, 204, 0.7);
+    --color-text: rgb(239, 239, 239);
+    --color-text-secondary: rgb(212, 212, 212);
     --color-logo: rgba(235, 235, 235, 0.8);
     --color-logo-active: rgba(40, 180, 99, 0.8);
     --colour-hamburger: var(--color-outer-logo);
@@ -46,7 +47,7 @@
 }
 
 * {
-    color: white;
+    color: var(--color-text);
     font-family: "Lato";
 }
 *:focus {
@@ -537,13 +538,13 @@ section > div {
 #subtitle {
     font-size: clamp(40px, 7vw, 50px);
     font-family: "Lato-Black";
-    color: var(--color-text);
+    color: var(--color-text-secondary);
 }
 
 #intro {
     font-size: 3em;
     font-family: "Roboto";
-    color: var(--color-text);
+    color: var(--color-text-secondary);
 }
 
 #content, #about-me {
@@ -843,4 +844,24 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     .content-logo {
         width: 50%;
     }
+}
+
+.about-me-content {
+    font-size: 1.1rem;
+}
+
+.about-me-content > p > em {
+    font-style: normal;
+    color: var(--color-outer-logo);
+    font-size: 1.2rem;
+}
+
+.passions-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 250px));
+    gap: 0 15px;
+}
+.passions-list > li {
+    
+    color: var(--color-text-secondary);
 }
