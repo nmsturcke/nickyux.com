@@ -31,6 +31,7 @@ function slideUpLoadingBody() {
 
 function loading() {
     if (window.location.href.includes("#")) {noLoading(); return;}
+
     setTimeout( () => {for(let i=0; i<loadingLogoPaths.length; i++) {loadingLogoPaths[i].classList.add("active")}}, loadingLogoAppearDelay);
     setTimeout( () => {loadingLogo.classList.add("disappear")}, loadingDisappearDelay);
     setTimeout( () => {loadingLogo.style.display = "none"}, loadingDisplayNoneDelay);
@@ -44,9 +45,11 @@ function noLoading(animation=false) {
 }
 
 function activate(animation=true) {
+    document.body.classList.remove("no-scroll")
     for (let i=0; i<elementsToAppear.length; i++) {
         if (animation) {
             elementsToAppear[i].classList.add("active")
+            document.querySelector("#top").scrollIntoView();
         } else {
             elementsToAppear[i].classList.add("active-no-anim")
         }
