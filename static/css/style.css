@@ -404,7 +404,7 @@ body.no-scroll {
   }
 
 .header {
-    z-index: 1;
+    z-index: 10;
     margin: 0;
     width: 100vw;
     height: 80px;
@@ -734,7 +734,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 .mobile-navigation.active {
     opacity: 1;
-    z-index: 1000;
+    z-index: 5;
     right: 0;
     transform: translateX(0)
 }
