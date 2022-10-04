@@ -723,7 +723,6 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     width: 100%;
     height: calc(100% - 80px);
     transform: translateX(100%);
-    right: -100%;
     opacity: 0.5;
     z-index: -1;
     background-color: var(--color-background-darker);
