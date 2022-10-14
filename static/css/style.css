@@ -6,6 +6,7 @@
     --color-outer-logo: #A36AFF;
     --color-letter-logo: #fff;
     --color-green: #28B463;
+    --color-blue: #1C2C5B;
     --color-dark-green: #0d2a00;
     --color-text: rgb(239, 239, 239);
     --color-text-secondary: rgb(212, 212, 212);
@@ -509,10 +510,6 @@ section {
     align-items: center;
 }
 
-section > div {
-    width: 60%;
-    padding: 10px 10px;
-}
 
 .section-title > h2 {
     font-size: clamp(40px, 6vw, 60px);
@@ -786,10 +783,24 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     margin-bottom: 10px;
 }
 
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .content-section {
     /* width: 100%; */
     height: fit-content;
     padding: 30px 10px;
+    width: 60%;
+    padding: 10px 10px;
+}
+
+.content-wrapper.content-blue {
+    background-color: var(--color-blue);
+    width: 100%;
+    box-shadow: inset 0 3px -30px var(--color-blue);
 }
 
 .about-me-wrapper {
