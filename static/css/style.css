@@ -544,10 +544,6 @@ section {
     color: var(--color-text-secondary);
 }
 
-#content, #about-me {
-    width: 100%;
-}
-
 @keyframes drawline1 {
     to {
         stroke-dashoffset: 2588;
@@ -796,6 +792,16 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     width: 60%;
     padding: 10px 10px;
 }
+@media (max-width: 1440px) {
+    .content-section {
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .content-section {
+        width: 90%;
+    }
+}
 
 .content-wrapper.content-blue {
     background-color: var(--color-blue);
@@ -812,9 +818,11 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     font-size: 1.5em;
     margin-bottom: 15px;
     position: relative;
+    font-family: "Lato-Black";
+    color: var(--color-text-secondary);
 }
 
-.content-title::before {
+/* .content-title::before {
     content: "";
     position: absolute;
     right: 100%;
@@ -838,7 +846,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     margin-left: 25px;
     background-color: var(--color-text);
     border-radius: 10px;
-}
+} */
 
 .about-me-img {
     display: flex;
