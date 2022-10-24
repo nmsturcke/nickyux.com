@@ -7,9 +7,11 @@
     --color-letter-logo: #fff;
     --color-green: #28B463;
     --color-blue: #1C2C5B;
+    --color-yellow: #fcff52;
     --color-dark-green: #0d2a00;
     --color-text: rgb(239, 239, 239);
     --color-text-secondary: rgb(212, 212, 212);
+    --color-text-yellow: rgb(239, 239, 200);
     --color-logo: rgba(235, 235, 235, 0.8);
     --color-logo-active: rgba(40, 180, 99, 0.8);
     --colour-hamburger: var(--color-outer-logo);
@@ -55,10 +57,11 @@
     outline-color: var(--color-outer-logo);
 }
 .btn-unstyled {
-    padding: none!important;
+    padding: 0!important;
     background: none!important;
     color: inherit;
     border: none!important;
+    margin: 0;
 }
 
 .split {
@@ -79,7 +82,7 @@ a {
 }
 
 a:hover, .a:hover {
-    color: #fcff52;
+    color: var(--color-yellow);
 }
 html {
     height: 100vh;
@@ -508,6 +511,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 
@@ -783,6 +787,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .content-section {
@@ -863,6 +868,40 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     .content-logo {
         width: 50%;
     }
+}
+
+.content a, .content .a {
+    position: relative;
+    color: var(--color-text-yellow);
+}
+
+.content a::before {
+    position: absolute;
+    inset: 0;
+    top: 100%;
+    content: "";
+    max-width: 0px;
+    height: 1px;
+    background-color: var(--color-yellow);;
+    transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+}
+.content .a::before {
+    position: absolute;
+    inset: 0;
+    top: 90%;
+    content: "";
+    max-width: 0px;
+    height: 1px;
+    background-color: var(--color-yellow);;
+    transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+}
+
+.content a:hover::before, .content .a:hover::before {
+    max-width: 100%;
 }
 
 .about-me-content {

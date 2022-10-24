@@ -1,0 +1,30 @@
+.scroll-hide, .scroll-hide-always {
+    --transition-time: 1000ms;
+    --offset-left: -300px;
+    --offset-right: 300px;
+}
+
+.scroll-hide, .scroll-hide-always {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all var(--transition-time);
+}
+
+.scroll-hide.from-left, .scroll-hide-always.from-left {
+    transform: translateX(var(--offset-left))
+}
+.scroll-hide.from-right, .scroll-hide-always.from-right {
+    transform: translateX(var(--offset-right))
+}
+
+.scroll-show {
+    opacity: 1;
+    filter: none;
+    transform: translate(0)!important;
+}
+
+@media (prefers-reduced-motion) {
+    .scroll-hide, .scroll-hide-always {
+        transition: none;
+    }
+}

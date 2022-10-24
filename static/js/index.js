@@ -60,4 +60,15 @@ function scrollFunc(_query) {
     document.querySelector(_query).scrollIntoView();
 }
 
+function updateAge() {
+    let ageItem = document.querySelector("[data-age]");
+
+    let now = Date.now();
+    let diff = (now.valueOf()) - 1143685147;
+    console.log(now.valueOf())
+    console.log(diff)
+    ageItem.textContent = `${diff}`;
+
+}
+
 loading();
