@@ -476,6 +476,27 @@ body.no-scroll {
     margin-left: auto;
 }
 
+.navbar-item .a {
+    position: relative;
+}
+
+.navbar-item .a::before {
+    position: absolute;
+    content: "";
+    background-color: var(--color-text-yellow);
+    max-width: 0px;
+    width: 100%;
+    height: 1px;
+    inset: 0;
+    top: 100%;
+    transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+.navbar-item .a:hover::before {
+    max-width: 100%;
+}
 
 @media (max-width: 768px) {
     .navbar-wrapper.pc, .navbar.pc {
@@ -773,14 +794,22 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 .mobilenav-content {
     margin: 20px 30px;
     width: 90%;
+    height: 100%;
 }
 
 .mobilenav {
+    height: 100%;
     font-size: 2em!important;
+    display: flex;
+    flex-direction: column;
 }
 
 .mobilenav-li:not(:last-child) {
     margin-bottom: 10px;
+}
+
+.mobilenav-li.separate {
+    justify-self: flex-end;
 }
 
 .content-wrapper {
@@ -870,12 +899,12 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     }
 }
 
-.content a, .content .a {
+#content a, #content .a {
     position: relative;
     color: var(--color-text-yellow);
 }
 
-.content a::before {
+#content a::before {
     position: absolute;
     inset: 0;
     top: 100%;
@@ -887,7 +916,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     -moz-transition: all .5s ease-in;
     -webkit-transition: all .5s ease-in;
 }
-.content .a::before {
+#content .a::before {
     position: absolute;
     inset: 0;
     top: 90%;

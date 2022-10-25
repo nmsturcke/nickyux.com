@@ -63,12 +63,14 @@ function scrollFunc(_query) {
 function updateAge() {
     let ageItem = document.querySelector("[data-age]");
 
-    let now = Date.now();
-    let diff = (now.valueOf()) - 1143685147;
-    console.log(now.valueOf())
-    console.log(diff)
-    ageItem.textContent = `${diff}`;
+    const now = Date.now();
+    const diff = (now.valueOf()) - 1143685147000;
 
+    const years = diff / (1000 * 60 * 60 * 24 * 365)
+    ageItem.textContent = `${years.toFixed(9)}`;
+
+    setTimeout(updateAge, 100)
 }
 
 loading();
+updateAge();
