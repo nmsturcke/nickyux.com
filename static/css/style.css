@@ -754,13 +754,12 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     width: 100%;
     height: calc(100% - 80px);
     transform: translateX(100%);
-    right: -100%;
     opacity: 0.5;
     z-index: -1;
     background-color: var(--color-background-darker);
-    transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
+    transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -webkit-transition: all .8s ease-in-out;
 }
 
 .mobile-navigation.active {
@@ -794,7 +793,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 .mobilenav-content {
     margin: 20px 30px;
     width: 90%;
-    height: 100%;
+    height: calc(100% - 80px);
 }
 
 .mobilenav {
@@ -810,6 +809,8 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 .mobilenav-li.separate {
     justify-self: flex-end;
+    margin: 0;
+    margin-top: auto;
 }
 
 .content-wrapper {
