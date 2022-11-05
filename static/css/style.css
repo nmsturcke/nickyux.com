@@ -982,3 +982,10 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 .experience-item-links li {
     padding: 0.2rem;
 }
+
+.experience-list > li {
+    border: 1px solid var(--color-outer-logo);
+    border-radius: 12px;
+    background-color: var(--color-background-darker);
+    padding: 20px;
+}
