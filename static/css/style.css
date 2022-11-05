@@ -947,3 +947,38 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     width: 1.2rem;
     height: 1.2rem;
 }
+
+.experience-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 500px));
+    gap: 2em;
+}
+@media (max-width: 768px) {
+    .experience-list {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+
+.experience-item-title {
+    color: var(--color-text);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.experience-item-title a {
+    color: var(--color-text)!important;
+}
+
+.experience-icon {
+    width: 2.5rem;
+    height:  2.5rem;
+    margin-right: 0.5rem;
+}
+
+.experience-item-links {
+    list-style-type: "🔗";
+}
+.experience-item-links li {
+    padding: 0.2rem;
+}
