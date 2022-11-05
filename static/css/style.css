@@ -941,3 +941,8 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     
     color: var(--color-text-secondary);
 }
+
+.country-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
