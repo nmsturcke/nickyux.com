@@ -67,7 +67,7 @@ function updateAge() {
     const diff = (now.valueOf()) - 1143685147000;
 
     const years = diff / (1000 * 60 * 60 * 24 * 365)
-    ageItem.textContent = `${years.toFixed(9)}`;
+    ageItem.textContent = `${years.toFixed(7)}`;
 
     setTimeout(updateAge, 100)
 }
