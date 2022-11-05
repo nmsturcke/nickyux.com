@@ -899,37 +899,26 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     }
 }
 
-#content a, #content .a {
+#content .a {
     position: relative;
     color: var(--color-text-yellow);
 }
 
-#content a::before {
+.content .a::before {
     position: absolute;
+    content: "";
+    background-color: var(--color-text-yellow);
+    max-width: 0px;
+    width: 100%;
+    height: 1px;
     inset: 0;
     top: 100%;
-    content: "";
-    max-width: 0px;
-    height: 1px;
-    background-color: var(--color-yellow);;
-    transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
-}
-#content .a::before {
-    position: absolute;
-    inset: 0;
-    top: 90%;
-    content: "";
-    max-width: 0px;
-    height: 1px;
-    background-color: var(--color-yellow);;
-    transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
+    transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
 }
 
-.content a:hover::before, .content .a:hover::before {
+.content .a:hover::before {
     max-width: 100%;
 }
 
