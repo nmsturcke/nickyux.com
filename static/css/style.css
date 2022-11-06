@@ -11,6 +11,7 @@
     --color-dark-green: #0d2a00;
     --color-text: rgb(239, 239, 239);
     --color-text-secondary: rgb(212, 212, 212);
+    --color-text-terciary: rgb(175, 175, 175);
     --color-text-yellow: rgb(239, 239, 200);
     --color-logo: rgba(235, 235, 235, 0.8);
     --color-logo-active: rgba(40, 180, 99, 0.8);
@@ -278,7 +279,7 @@ body.no-scroll {
     inset: 0;
     width: 2px;
     height: 100px;
-    background-color: var(--color-text);
+    background-color: var(--color-text-terciary);
     border-radius: 10px;
 }
 
@@ -358,7 +359,7 @@ body.no-scroll {
     inset: 0;
     width: 2px;
     height: 100px;
-    background-color: var(--color-text);
+    background-color: var(--color-text-terciary);
     border-radius: 10px;
 }
 
@@ -965,7 +966,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     max-width: 100%;
 }
 
-.about-me-content {
+.content-wrapper {
     font-size: 1.1rem;
 }
 
@@ -995,6 +996,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 500px));
     gap: 2em;
+    font-size: 1rem;
 }
 @media (max-width: 1000px) {
     .experience-list {
@@ -1060,6 +1062,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     background-color: var(--color-background-darker);
     border-radius: 10px;
     border: 1px solid var(--color-outer-logo);
+    font-size: 1.5rem;
 }
 
 .footer {
