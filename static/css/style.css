@@ -943,7 +943,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     overflow-x: hidden;
 }
 
-.content .a {
+#content .a {
     position: relative;
     color: var(--color-text-yellow);
 }
