@@ -4,6 +4,11 @@ const loadingLogoPaths = document.getElementsByClassName("loading-logo-path")
 const loadingLetterN = document.querySelector("[data-letter-n]");
 const elementsToAppear = document.getElementsByClassName("appear")
 const header = document.querySelector("[data-header]")
+const title = document.querySelector("[data-title]")
+const scrollToTopPC = document.querySelector("[data-scroll-to-top-pc]")
+const scrollToTopMobile = document.querySelector("[data-scroll-to-top-mobile]")
+
+
 
 const loadingLogoAppearDelay = 1000
 const loadingDisappearDelay = loadingLogoAppearDelay + 2000
@@ -72,5 +77,28 @@ function updateAge() {
     setTimeout(updateAge, 100)
 }
 
+function checkIfScrolled() {
+    console.log("checking")
+    let rect = title.getBoundingClientRect();
+
+    let isInView = (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+    console.log(isInView)
+    if (!isInView) {
+        scrollToTopPC.classList.add("active")
+        scrollToTopMobile.classList.add("active")
+    } else {
+        scrollToTopPC.classList.remove("active")
+        scrollToTopMobile.classList.remove("active")
+    }
+    
+    setTimeout(checkIfScrolled, 500)
+}
+
 loading();
 updateAge();
+setTimeout(checkIfScrolled, 1000)

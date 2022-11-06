@@ -466,6 +466,35 @@ body.no-scroll {
     animation: spin .3s linear forwards;
 }
 
+.header .back-to-top {
+    position: absolute;
+    right: 10px;
+    top: 100%;
+    margin: 10px 20px;
+    padding: 10px!important;
+    background-color: var(--color-background-darker)!important;
+    cursor: pointer;
+    border: 1px solid var(--color-outer-logo)!important;
+    border-radius: 7px;
+    z-index: -100;
+    opacity: 0;
+    transform: translateY(-150%);
+    transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+}
+
+.header .back-to-top.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .header .back-to-top.active {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+}
 
 .navbar-wrapper, .navbar {
     display: inline-flex;
@@ -525,7 +554,6 @@ body.no-scroll {
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 100px;
 }
 
 section {
@@ -813,19 +841,28 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     margin-top: auto;
 }
 
+.mobilenav-li .mobile-scroll-to-top {
+    opacity: 0;
+    transition: all 500ms;
+    -moz-transition: all 500ms;
+    -webkit-transition: all 500ms;
+}
+
+.mobilenav-li .mobile-scroll-to-top.active {
+    opacity: 1;
+}
+
 .content-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 .content-section {
     /* width: 100%; */
     height: fit-content;
-    padding: 30px 10px;
+    padding: 90px 10px 0 10px;
     width: 60%;
-    padding: 10px 10px;
 }
 @media (max-width: 1440px) {
     .content-section {
@@ -853,6 +890,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     font-size: 1.5em;
     margin-bottom: 15px;
     position: relative;
+    text-align: center;
     font-family: "Lato-Black";
     color: var(--color-text-secondary);
 }
@@ -900,12 +938,16 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     }
 }
 
-#content .a {
+#content {
+    overflow-x: hidden;
+}
+
+.a {
     position: relative;
     color: var(--color-text-yellow);
 }
 
-.content .a::before {
+.a::before {
     position: absolute;
     content: "";
     background-color: var(--color-text-yellow);
@@ -919,7 +961,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     -webkit-transition: all .2s ease-in;
 }
 
-.content .a:hover::before {
+.a:hover::before {
     max-width: 100%;
 }
 
@@ -954,7 +996,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     grid-template-columns: repeat(2, minmax(300px, 500px));
     gap: 2em;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .experience-list {
         grid-template-columns: repeat(1, 100%);
     }
@@ -988,4 +1030,57 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     border-radius: 12px;
     background-color: var(--color-background-darker);
     padding: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+}
+.contact-list-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    stroke: var(--color-outer-logo);
+    stroke-width: 1px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.contact-list-icon.discord > * {
+    stroke: var(--color-outer-logo);
+    stroke-width: 20px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.say-hello {
+    align-self: center;
+    margin: auto;
+    padding: 15px;
+    background-color: var(--color-background-darker);
+    border-radius: 10px;
+    border: 1px solid var(--color-outer-logo);
+}
+
+.footer {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+@media (max-width: 1440px) {
+    .footer {
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        width: 90%;
+    }
 }

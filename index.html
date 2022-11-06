@@ -51,13 +51,10 @@
                         <button class="btn-unstyled a" onclick="closeHamburger('#experience');">Experience</button>
                     </li>
                     <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#work');">Work</button>
-                    </li>
-                    <li class="mobilenav-li">
                         <button class="btn-unstyled a" onclick="closeHamburger('#contact');">Contact</button>
                     </li>
                     <li class="mobilenav-li separate">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#top');">Back to Top</button>
+                        <button class="btn-unstyled a mobile-scroll-to-top" onclick="closeHamburger('#top');" data-scroll-to-top-mobile>Back to Top</button>
                     </li>
                 </ul>
             </div>
@@ -100,9 +97,6 @@
                             <button class="btn-unstyled a" onclick="scrollFunc('#experience');">Experience</button>
                         </li>
                         <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#work');">Work</button>
-                        </li>
-                        <li class="navbar-item">
                             <button class="btn-unstyled a" onclick="scrollFunc('#contact');">Contact</button>
                         </li>
                     </ul>
@@ -114,9 +108,10 @@
                         </ul>
                     </div>
                 </div>
+                <button class="btn-unstyled back-to-top" onclick="scrollFunc('#top')" data-scroll-to-top-pc>Back to Top</button>
             </header>
             <section class="top" id="top">
-                <div class="title">
+                <div class="title" data-title>
                     <div class="appear anim2" style="animation-delay: 100ms">
                         <span id="pretitle">I am</span>
                     </div>
@@ -139,8 +134,8 @@
                         </div>
                         <div class="about-me-content-wrapper row">
                             <div class="about-me-content col-md-7 col-12 scroll-hide from-left">
-                                <p>Hello! My name is Nicholas, but most people call me Nicky.</p>
-                                <p>I am <span data-age>16</span> years old, I was born in <a class="a" href="https://www.google.com/maps/@51.5287718,-0.2416802,11z">London</a> but moved to Spain at a young age, I currently live in <a class="a" href="https://www.google.com/maps/place/La+Rioja">La Rioja, Spain</a>. I speak <img class="country-icon" src="/static/img/uk.png"> English and <img class="country-icon" src="/static/img/spain.png"> Spanish fluently.</p>
+                                <p>Hello! My name is Nicholas Sturcke, but most people call me Nicky.</p>
+                                <p>I am <span data-age>16</span> years old, I was born in <a class="a" href="https://www.google.com/maps/@51.5287718,-0.2416802,11z" target="_blank">London</a> but moved to Spain at a young age, I currently live in <a class="a" href="https://www.google.com/maps/place/La+Rioja" target="_blank">La Rioja, Spain</a>. I speak <img class="country-icon" src="/static/img/uk.png"> English and <img class="country-icon" src="/static/img/spain.png"> Spanish fluently.</p>
                                 <p>I enjoy starting and working on coding projects, so far, I have mostly worked with API's and web development. You can check out some of my published projects by clicking <button class="btn-unstyled a" onclick="scrollFunc('#experience')">this link</button>.</p>
                                 <p>From a young age I was interested in computers, and at 8 years of age I started learning <em>Python</em>.</p>
                                 <p style="margin: 0 0 5px 0;">Here are some of my passions:</p>
@@ -160,7 +155,7 @@
                     </div>
                 </div>
                 <div class="content-wrapper">
-                    <div class="content-section about-me-wrapper content-blue" id="experience">
+                    <div class="content-section experience-wrapper content-blue" id="experience">
                         <div class="experience-title content-title scroll-hide fade-in">
                             <h1 class="content-title-h1">Experience</h1>
                         </div>
@@ -170,42 +165,57 @@
                                 <ul class="experience-list list-unstyled">
                                     <li>
                                         <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/cellule.png"><a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer">Cellule</a></h3>
+                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/cellule.png"><a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Cellule</a></h3>
                                             <p class="experience-item-text">Cellule is an Invite Logging bot for Discord. Designed to give Discord Managers a great experience when dealing with invites, as it's a feature Discord itself lacks.</p>
                                             <p class="experience-item-text">This project started in July 2021 and, since then, has served over 1.6 million users over 900 different servers.</p>
                                             <ul class="experience-item-links">
                                                 <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer">Website</a>
+                                                    <a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Website</a>
                                                 </li>
                                                 <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/add" rel="noopener noreferrer">Add the Bot</a>
+                                                    <a class="a" href="https://cellule.nickyux.com/add" rel="noopener noreferrer" target="_blank">Add the Bot</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/elite.png"><a class="a" href="https://elitescrims.com/" rel="noopener noreferrer">Elite Scrims</a></h3>
+                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/elite.png"><a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Elite Scrims</a></h3>
                                             <p class="experience-item-text">Elite Scrims is a network of Discord servers with over 1 million members combined.</p>
                                             <p class="experience-item-text">I have worked on a custom bot for their servers to adjust to their needs and, recently, on a website to help their players!</p><ul class="experience-item-links">
                                                 <li>
-                                                    <a class="a" href="https://elitescrims.com/" rel="noopener noreferrer">Website</a>
+                                                    <a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Website</a>
                                                 </li>
                                                 <li>
-                                                    <a class="a" href="https://discord.gg/fn" rel="noopener noreferrer">Join Elite Customs (Discord Server)</a>
+                                                    <a class="a" href="https://discord.gg/fn" rel="noopener noreferrer" target="_blank">Join Elite Customs (Discord Server)</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                 </ul>
-                                <p>I also (occasionally) contribute to Open-Source projects, which you can find on my <a class="a" href="https://github.com/nmsturcke" rel="noreferrer noopener" target="_blank">GitHub Profile</a></p>
+                                <p>I also contribute to Open-Source projects, you can find on my <a class="a" href="https://github.com/nmsturcke" rel="noreferrer noopener" target="_blank">GitHub Profile</a> some projects I've contributed to!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="content-section contact-wrapper content-blue" id="contact">
+                        <div class="contact-title content-title scroll-hide fade-in">
+                            <h1 class="content-title-h1">Contact</h1>
+                        </div>
+                        <div class="contact-content-wrapper ">
+                            <div class="contact-content scroll-hide from-right">
+                                <p>You can reach out to me with the button below, feel free to drop me an email if you need anythinig, or just want to say Hello!</p>
+                                <a href="mailto:me@nickyux.com" class="say-hello">Say Hello</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="footer" class="footer">
-
+                <span>Built by Nicholas Sturcke</span>
+                <span><a class="a" href="https://github.com/nmsturcke/nickyux.com" rel="noreferrer noopener" target="_blank">GitHub Repo</a></span>
+                <span>&copy; Nickyux</span>
             </section>
         </div>
         
