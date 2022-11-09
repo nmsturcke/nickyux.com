@@ -1074,7 +1074,7 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
+    margin-top: 120px;
     padding-bottom: 50px;
 }
 @media (max-width: 1440px) {
@@ -1086,4 +1086,12 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     .footer {
         width: 90%;
     }
+}
+
+.footer * {
+    color: var(--color-text-secondary);
+    padding: 2px 0;
+}
+.copy {
+    color: var(--color-text-terciary);
 }
