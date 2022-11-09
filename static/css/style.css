@@ -485,16 +485,35 @@ body.no-scroll {
     -webkit-transition: all .5s linear;
 }
 
+.back-to-top-svg {
+    width: 30px;
+    height: 30px;
+    stroke: var(--color-outer-logo);
+    fill: var(--color-background);
+    stroke-width: 2px;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+}
+
+.back-to-top-svg:hover {
+    stroke: var(--color-yellow)
+}
+
+.back-to-top-text {
+    display: none;
+    transition: all .7s linear;
+    -moz-transition: all .7s linear;
+    -webkit-transition: all .7s linear;
+}
+
 .header .back-to-top.active {
     transform: translateY(0);
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .header .back-to-top.active {
-        opacity: 0;
-        transform: translateY(-150%);
-    }
+.header .back-to-top.active2 {
+    max-width: 300px;
 }
 
 .navbar-wrapper, .navbar {
@@ -844,6 +863,8 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 .mobilenav-li .mobile-scroll-to-top {
     opacity: 0;
+    display: flex;
+    align-items: center;
     transition: all 500ms;
     -moz-transition: all 500ms;
     -webkit-transition: all 500ms;
@@ -851,6 +872,13 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
 
 .mobilenav-li .mobile-scroll-to-top.active {
     opacity: 1;
+}
+.mobilenav-li .mobile-scroll-to-top:hover * {
+    color: var(--color-yellow);
+    stroke: var(--color-yellow);
+    transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
 }
 
 .content-wrapper {

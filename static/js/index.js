@@ -7,6 +7,7 @@ const header = document.querySelector("[data-header]")
 const title = document.querySelector("[data-title]")
 const scrollToTopPC = document.querySelector("[data-scroll-to-top-pc]")
 const scrollToTopMobile = document.querySelector("[data-scroll-to-top-mobile]")
+const scrollToTopPCText = document.querySelector("[data-scroll-to-top-pc-text]")
 
 const loadingLogoAppearDelay = 1000
 const loadingDisappearDelay = loadingLogoAppearDelay + 2000
@@ -76,7 +77,6 @@ function updateAge() {
 }
 
 function checkIfScrolled() {
-    console.log("checking")
     let rect = title.getBoundingClientRect();
 
     let isInView = (
@@ -85,7 +85,6 @@ function checkIfScrolled() {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     )
-    console.log(isInView)
     if (!isInView) {
         scrollToTopPC.classList.add("active")
         scrollToTopMobile.classList.add("active")
@@ -96,6 +95,17 @@ function checkIfScrolled() {
     
     setTimeout(checkIfScrolled, 500)
 }
+
+scrollToTopPC.addEventListener("mouseenter", (el) => {
+    scrollToTopPC.classList.add("active2")
+    scrollToTopPCText.classList.add("active")
+})
+
+scrollToTopPC.addEventListener("mouseleave", (el) => {
+    scrollToTopPC.classList.remove("active2")
+    scrollToTopPCText.classList.remove("active")
+})
+
 
 loading();
 updateAge();
