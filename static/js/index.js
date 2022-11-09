@@ -8,8 +8,6 @@ const title = document.querySelector("[data-title]")
 const scrollToTopPC = document.querySelector("[data-scroll-to-top-pc]")
 const scrollToTopMobile = document.querySelector("[data-scroll-to-top-mobile]")
 
-
-
 const loadingLogoAppearDelay = 1000
 const loadingDisappearDelay = loadingLogoAppearDelay + 2000
 const loadingDisplayNoneDelay = loadingDisappearDelay + 1700
