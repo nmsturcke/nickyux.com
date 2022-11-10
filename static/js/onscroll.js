@@ -1,6 +1,5 @@
 const ob = new IntersectionObserver((e) => {
     e.forEach((e_) => {
-        console.log(e_)
         if (e_.isIntersecting) {
             e_.target.classList.add("scroll-show")
         } else {
