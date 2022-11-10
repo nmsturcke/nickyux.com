@@ -45,7 +45,7 @@ function slideUpLoadingBody() {
 };
 
 function loading() {
-    if (window.location.href.includes("#")) {noLoading(); return;}
+    if (window.location.href.includes("#")) {setTimeout(noLoading, 100); return;}
 
     setTimeout( () => {for(let i=0; i<loadingLogoPaths.length; i++) {loadingLogoPaths[i].classList.add("active")}}, loadingLogoAppearDelay);
     setTimeout( () => {loadingLogo.classList.add("disappear")}, loadingDisappearDelay);
@@ -119,8 +119,9 @@ function newDistance(index) {
 }
 
 async function setupShapes() {
-    console.log("setup shapes called")
-    while (shapeCount > shapes.length) {
+    let iterations = 0;
+    while (shapeCount > shapes.length && iterations < 15) {
+        iterations ++;
         let shapeWrapper = document.createElement("div");
         shapeWrapper.classList.add("background-shape-wrapper");
         shapeWrapper.classList.add("pc");
