@@ -1161,6 +1161,11 @@ body.dark-mode .hamburger::before, body.dark-mode .hamburger::after {
     -webkit-transition: all .2s ease-out; */
     animation: background-shape-animation 10s linear forwards infinite;
 }
+@media (max-width: 768px) {
+    .background-shape-wrapper {
+        display: none;
+    }
+}
 
 .background-shape.square {
     width: var(--shape-size);
