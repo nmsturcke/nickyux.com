@@ -253,6 +253,7 @@ body.no-scroll {
     left: 5vw;
     transform: translateY(100%);
     width: fit-content;
+    z-index: 9;
 }
 
 .side-left.active {
@@ -316,6 +317,7 @@ body.no-scroll {
     right: 5vw;
     transform: translateY(100%);
     width: fit-content;
+    z-index: 9;
 }
 
 .side-right.active {
