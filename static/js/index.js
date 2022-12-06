@@ -219,4 +219,4 @@ scrollToTopPC.addEventListener("mouseleave", (el) => {
 loading();
 updateAge();
 setTimeout(checkIfScrolled, 1000)
-setupShapes()
+// setupShapes()
