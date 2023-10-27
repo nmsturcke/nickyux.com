@@ -12,8 +12,8 @@ const shapesContainer = document.querySelector("[data-shapes-container]")
 const redDot = document.querySelector("[data-red-dot]")
 const redDot2 = document.querySelector("[data-red-dot2]")
 
-const loadingLogoAppearDelay = 1000
-const loadingDisappearDelay = loadingLogoAppearDelay + 2000
+const loadingLogoAppearDelay = 200
+const loadingDisappearDelay = loadingLogoAppearDelay + 1500
 const loadingDisplayNoneDelay = loadingDisappearDelay + 1700
 const loadingSlideUpDelay = loadingDisplayNoneDelay + 0
 const loadingSlideUpTime = 500
