@@ -65,3 +65,16 @@
         font-size: 90px;
     }
 }
+
+svg.background-item {
+    opacity: 1;
+    fill: rgba(94, 233, 181, 0.1);
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+svg.background-item.x {
+    bottom: 50px;
+    transform: rotate(45deg);
+    width: 1200px;
+    height: 1200px;
+}
