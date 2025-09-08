@@ -1,7 +1,7 @@
 function animateStartup() {
     const timeline = gsap.timeline();
 
-    timeline.from(".text-supertitle.self-end:not(.after)", {
+    timeline.from(".text-supertitle.self-end", {
         marginRight: "80vw",
         duration: 2,
         ease: "power3.out",
@@ -13,43 +13,31 @@ function animateStartup() {
         duration: 1.5,
         ease: "power3.out"
     }, "-=1.5");
-    timeline.to(".text-supertitle:not(.after)", {
+    timeline.to(".text-supertitle", {
         maxHeight: "0px",
         opacity: 0,
-        duration: 0.5,
+        duration: 1,
         ease: "power3.inOut",
-    }, "goUp +=0.5");
+        delay: 0.5
+    }, "goUp");
     timeline.to(".text-title:not(.after)", {
         y: -1000,
         opacity: 0,
         duration: 1,
         ease: "power3.in",
-    }, "goUp+=0.5");
+    });
     timeline.to("div:has(> .text-title:not(.after))", {
         maxHeight: "0px",
-        opacity: 0,
-        padding: "0px!important",
-        duration: 1,
+        duration: 0.5,
         ease: "power3.inOut"
-    }, "goUp+=1");
-    // }, "goUp+=2.5");
-    timeline.to("div:has(> .text-title.after)", {
+    }, "goUp+=2.5");
+    timeline.from("div:has(> .text-title.after)", {
         y: 0,
-        opacity: 1,
-        duration: 2.5,
+        opacity: 0,
+        transform: "scale(1, 5)",
+        duration: 1.5,
         ease: "power3.out"
-    }, "goUp+=1");
-    timeline.from(".text-supertitle.after", {
-        y: -250,
-        duration: 2.5,
-        ease: "power3.out"
-    }, "goUp+=2.5");
-    timeline.to(".text-title.after", {
-        transform: "scale(1)",
-        duration: 2.5,
-        ease: "power3.out"
-    }, "goUp+=2.5");
-
+    }, "goUp+=0.5");
 }
 
 animateStartup();

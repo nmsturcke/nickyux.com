@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full w-full">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L777M5SP41"></script>
@@ -15,9 +15,7 @@
     <meta name="viewport" content="minimum-scale=1.0, width=device-width">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nickyux.com/">
-    <!-- <meta property="og:site_name" content="Nickyux"> -->
     <meta property="og:keywords" content="Nicky,Nickyux,Nicholas,Resume,About Me,About">
-    <!-- <meta property="twitter:card" content="summary_large_image"> -->
     <meta property="twitter:site:id" content="@nickyux3003">
     <meta property="twitter:creator" content="@nickyux3003">
     <meta property="twitter:creator:id" content="@nickyux3003">
@@ -27,231 +25,53 @@
     <meta property="description" content="Nickyux's personal website, where you can find more information about his previous and current projects and find out how to contact him." data-react-helmet="true">
     <meta property="og:image" content="/static/img/logo.png" data-react-helmet="true">
     <meta property="image" content="/static/img/logo.png" data-react-helmet="true">
-    <meta property="og:image:alt" content="A white letter N inside a dark purple circle with a lighter purple border" data-react-helmet="true">
-    <meta property="theme-color" content="#2e0044" data-react-helmet="true">
+    <!-- <meta property="og:image:alt" content="A white letter N inside a dark purple circle with a lighter purple border" data-react-helmet="true"> -->
+    <meta property="theme-color" content="#6D11B0" data-react-helmet="true">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/onscroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="static/js/index.js" defer></script>
-    <script src="static/js/mobilenav.js" defer></script>
-    <script src="static/js/onscroll.js" defer></script>
     <title>Nickyux</title>
 </head>
-
-<div class="mobile-navigation mobile " data-mobilenav-content>
-    <div class="mobilenav-content-wrapper">
-        <div class="mobilenav-wrapper">
-            <div class="mobilenav-content">
-                <ul class="mobilenav list-unstyled">
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#about-me');">About Me</button>
-                    </li>
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#experience');">Experience</button>
-                    </li>
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#contact');">Contact</button>
-                    </li>
-                    <li class="mobilenav-li separate">
-                        <button class="btn-unstyled a mobile-scroll-to-top" onclick="closeHamburger('#top');" data-scroll-to-top-mobile><svg class="back-to-top-svg" clip-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z" fill-rule="nonzero"/></svg>Back to Top</button>
-                    </li>
-                </ul>
+<body class="h-full w-full">
+    <noscript>
+        <h1>This website requires Javascript to work</h1>
+    </noscript>
+    <main class="h-full w-full">
+        <div id="content" class="h-full w-full flex flex-col items-center justify-center bg-stone-200">
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
             </div>
-        </div>
-    </div>
-</div>
-<body class="no-scroll">
-    <div class="loading-body" data-loading-body>
-        <div class="centered">
-            <noscript>
-                <h1>This website requires Javascript to work</h1>
-            </noscript>
-            <div class="loading-logo-wrapper">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="512" viewBox="0, 0, 512, 512" class="loading-logo" data-loading-logo>
-                    <g id="Layer_1">
-                        <path class="loading-logo-path" id="loading-logo-path-1" d="M256.5,462.5 C142.729,462.5 50.5,370.271 50.5,256.5 C50.5,142.729 142.729,50.5 256.5,50.5 C370.271,50.5 462.5,142.729 462.5,256.5 C462.5,370.271 370.271,462.5 256.5,462.5 z" />
-                        <path class="loading-logo-path" id="loading-logo-path-2" d="M176.5,381 L176.5,132 L336.5,381 L336.5,132" />
-                    </g>
-                  </svg>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
             </div>
-        </div>
-    </div>
-    <main class="main-body">
-        <div class="content">
-            <header class="header fixed-top appear anim1">
-                <div class="logo-header">
-                    <a href="#content" class="skip-navigation">Skip Navigation</a>
-                    <a href="/">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="512" viewBox="0, 0, 512, 512" class="logo-header-img">
-                            <g id="Layer_1">
-                                <path class="loading-logo-path transition appear" id="loading-logo-path-1" d="M256.5,462.5 C142.729,462.5 50.5,370.271 50.5,256.5 C50.5,142.729 142.729,50.5 256.5,50.5 C370.271,50.5 462.5,142.729 462.5,256.5 C462.5,370.271 370.271,462.5 256.5,462.5 z" />
-                                <path class="loading-logo-path transition appear" id="loading-logo-path-2" d="M176.5,381 L176.5,132 L336.5,381 L336.5,132" />
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="navbar-wrapper ">
-                    <ul class="navbar pc">
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#about-me');">About Me</button>
-                        </li>
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#experience');">Experience</button>
-                        </li>
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#contact');">Contact</button>
-                        </li>
-                    </ul>
-                    <div class="select-menu mobile">
-                        <div id="hamburger-wrapper" class="hamburger-wrapper" data-mobilenav-toggle>
-                            <div id="hamburger" class="hamburger" data-mobilenav-toggle-icon>
-                            </div>
-                        </div>
-                        </ul>
-                    </div>
-                </div>
-                <button class="btn-unstyled back-to-top pc" onclick="scrollFunc('#top')" data-scroll-to-top-pc aria-label="Back to Top"><svg class="back-to-top-svg" clip-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z" fill-rule="nonzero"/></svg><span data-scroll-to-top-pc-text class="back-to-top-text">Back to Top</span></button>
-            </header>
-            <section class="top" id="top">
-                <div class="title" data-title>
-                    <div class="appear anim2" style="animation-delay: 100ms">
-                        <span id="pretitle">I am</span>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 200ms">
-                        <h1 id="title">Nickyux,</h1>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 300ms">
-                        <h2 id="subtitle">I make invisible things work.</h2>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 400ms">
-                        <p>I build backend structures to support the frontend of projects.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="content">
-                <div class="content-wrapper">
-                    <div class="top content-section about-me-wrapper content-blue" id="about-me">
-                        <div class="about-me-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">About Me</h1>
-                        </div>
-                        <div class="about-me-content-wrapper row">
-                            <div class="about-me-content col-md-7 col-12 scroll-hide from-left">
-                                <p>Hello! My name is Nicholas Sturcke, but most people just call me Nicky.</p>
-                                <p>I was born in <a class="a" href="https://www.google.com/maps/@51.5287718,-0.2416802,11z" target="_blank">London</a> <span data-age>16</span> years ago but moved to Spain at a young age, I currently live in <a class="a" href="https://www.google.com/maps/place/La+Rioja" target="_blank">La Rioja, Spain</a>. I speak <img class="country-icon" src="/static/img/uk.png"> English and <img class="country-icon" src="/static/img/spain.png"> Spanish fluently.</p>
-                                <p>I enjoy starting and working on development projects, most of my work so far has been related to API's and Web Development. My most relevant published projects are available by clicking <button class="btn-unstyled a" onclick="scrollFunc('#experience')">this link</button>.</p>
-                                <p>I started messing about with computers at a young age and, when I got my hands on a book on Python, I learnt all I could about it. Since then I have learnt other languages such as HTML, CSS & JavaScript!</p>
-                                <p style="margin: 0 0 5px 0;">Some of my main passions are the following:</p>
-                                <ul class="passions-list list-unstyled">
-                                    <li>Piano</li>
-                                    <li>Cats</li>
-                                    <li>Coding</li>
-                                    <li>Video Games</li>
-                                    <li>Community Management</li>
-                                    <li>Cyber Security</li>
-                                </ul>
-                            </div>
-                            <div class="about-me-img scroll-hide from-right col-md-5 col-12">
-                                <img class="content-logo" src="/static/img/logo.png" alt="Logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-section experience-wrapper content-blue" id="experience">
-                        <div class="experience-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">Experience</h1>
-                        </div>
-                        <div class="experience-content-wrapper ">
-                            <div class="experience-content scroll-hide from-right">
-                                <p>I have worked on a few projects in my years of development, below are my main projects.</p>
-                                <ul class="experience-list list-unstyled">
-                                    <li>
-                                        <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/cellule.png"><a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Cellule</a></h3>
-                                            <p class="experience-item-text">Cellule is an Invite Logging bot for Discord designed to give Discord Managers a great experience when dealing with invites, aiming to make up for where Discord's features stop.</p>
-                                            <p class="experience-item-text">Since the start of the project in July 2021, it has served over 2.6 million users in over 1000 different servers.</p>
-                                            <ul class="experience-item-links">
-                                                <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Website</a>
-                                                </li>
-                                                <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/add" rel="noopener noreferrer" target="_blank">Add the Bot</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/elite.png"><a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Elite Scrims</a></h3>
-                                            <p class="experience-item-text">Elite Scrims is a network of Discord servers with over 1 million members.</p>
-                                            <p class="experience-item-text">I have worked on a custom bot for their servers to adjust to their needs and, more recently, on a website to help their players!</p><ul class="experience-item-links">
-                                                <li>
-                                                    <a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Website</a>
-                                                </li>
-                                                <li>
-                                                    <a class="a" href="https://discord.gg/fn" rel="noopener noreferrer" target="_blank">Join Elite Customs (Discord Server)</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p>I also contribute to Open-Source projects, you can find most of them on my <a class="a" href="https://github.com/nmsturcke" rel="noreferrer noopener" target="_blank">GitHub Profile</a>!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-section contact-wrapper content-blue" id="contact">
-                        <div class="contact-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">Contact</h1>
-                        </div>
-                        <div class="contact-content-wrapper ">
-                            <div class="contact-content scroll-hide from-right">
-                                <p>You can reach out to me by clicking the button below, feel free to drop me an email if you need anything, or just want to say Hello!</p>
-                                <a href="mailto:me@nickyux.com" class="say-hello">Say Hello</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="footer" class="footer">
-                <span>Built by Nicholas Sturcke</span>
-                <span><a class="a" href="https://github.com/nmsturcke/nickyux.com" rel="noreferrer noopener" target="_blank">GitHub Repository</a></span>
-                <span class="copy">&copy; Nickyux</span>
-            </section>
-        </div>
-        
-        <div class="background-overlay">
-            <div class="background-shapes" data-shapes-container>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
             </div>
-        </div>
-        <div orientation="left" class="side-left appear anim4 pc" style="animation-delay: 500ms;">
-            <ul class="socials-list">
-                <li>
-                    <a href="https://github.com/nmsturcke" aria-label="GitHub" target="_blank" rel="noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socials-logo github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/nickyux3003" aria-label="Twitter" target="_blank" rel="noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socials-logo twitter"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://discord.gg/8HfUfuKtC7" aria-label="Discord" target="_blank" rel="noreferrer">
-                        <svg viewBox="-10 -30 275 275" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" fill="none" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" class="socials-logo twitter">
-                            <g>
-                                <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" ></path>
-                            </g>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div orientation="right" class="side-right appear anim4 pc" style="animation-delay: 500ms;">
-            <div class="email-wrapper">
-                <a href="mailto:me@nickyux.com" class="email-text">me@nickyux.com</a>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-400 select-none">
+                    <h2 class="self-start text-supertitle" style="max-height: 72px">I</h2>
+                    <h2 class="self-end ml-auto text-supertitle" style="max-height: 72px">am</h2>
+                </div>
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
+            </div>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
+            </div>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
+            </div>
+            <div class="h-full w-fit flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
+            </div>
+            <div class="h-full w-fit flex flex-col items-center justify-center pb-4" style="font-family: 'Federal Escort', sans-serif;  opacity: 0;">
+                <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-400 select-none" style>
+                    <h2 class="self-start text-supertitle after">I</h2>
+                    <h2 class="self-end ml-auto text-supertitle after">am</h2>
+                </div>
+                <h1 class="text-purple-800 text-title after select-none" style="transform: scale(1, 5);">nickyux</h1>
             </div>
         </div>
     </main>
