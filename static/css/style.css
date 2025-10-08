@@ -3,16 +3,90 @@
     src: url("/static/fonts/FederalEscort.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Druk Wide Bold";
+    src: url("/static/fonts/DrukWideBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Achafont";
+    src: url("/static/fonts/Achafont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Austria";
+    src: url("/static/fonts/Austria.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BodoniFLF";
+    src: url("/static/fonts/BodoniFLF.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ERTHQAKE";
+    src: url("/static/fonts/ERTHQAKE.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FadeToGrey";
+    src: url("/static/fonts/FadeToGrey.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Funkrocker";
+    src: url("/static/fonts/Funkrocker.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Germanica";
+    src: url("/static/fonts/Germanica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "GlassHouses";
+    src: url("/static/fonts/GlassHouses.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "KOMTIT";
+    src: url("/static/fonts/KOMTIT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "newcomictitle";
+    src: url("/static/fonts/newcomictitle.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Subtitle";
+    src: url("/static/fonts/Subtitle.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TitleWaveRegular";
+    src: url("/static/fonts/TitleWaveRegular.ttf") format("truetype");
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
 .text-title {
     font-size: 350px;
     text-align: center;
     line-height: 0.6;
+    color: rgba(0,0,0,0)!important;
+    -webkit-text-stroke: 1px #AAAAAA;
 }
 
 
 .text-supertitle {
     font-size: 100px;
     line-height: 0.8;
+    color: rgba(0,0,0,0)!important;
+    -webkit-text-stroke: 1px #AAAAAA;
 }
 
 /* Small Mobile */

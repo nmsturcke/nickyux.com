@@ -32,85 +32,97 @@
     <link rel="stylesheet" href="static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="static/js/index.js" defer></script>
     <title>Nickyux</title>
 </head>
-<body class="h-full w-full">
+<body class="h-fit w-full" style="background: #080808;">
     <noscript>
         <h1>This website requires Javascript to work</h1>
     </noscript>
-    <main class="h-full w-full">
-        <div id="background" class="h-full w-full fixed top-0 left-0 -z-10 bg-gradient-to-b from-stone-200 to-gray-300">
-            <!-- N -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 318 215" version="1.1">
-                <path d="M 7 107 L 7 205 55.990 205 L 104.981 205 105.240 156.326 L 105.500 107.651 125.444 138.076 C 136.413 154.809, 148.202 172.151, 151.642 176.613 C 160.170 187.678, 169.490 195.960, 178.646 200.607 L 186.313 204.500 247.157 204.780 L 308 205.059 308 107.030 L 308 9 259.509 9 L 211.019 9 210.759 58.734 L 210.500 108.467 190.181 74.305 C 179.006 55.516, 167.294 37.085, 164.155 33.348 C 156.825 24.620, 146.323 15.817, 138.691 12.003 L 132.681 9 69.840 9 L 7 9 7 107" />
-            </svg>
-            <!-- I -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 109 206" version="1.1">
-                <path d="M 5 103 L 5 201 54 201 L 103 201 103 103 L 103 5 54 5 L 5 5 5 103" />
-            </svg>
-            <!-- C -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 234 205" version="1.1">
-                <path d="M 38.905 5.898 C 27.523 9.539, 17.179 18.490, 10.453 30.518 C 3.917 42.205, 3.907 42.332, 4.219 107.145 L 4.500 165.500 7.384 171.373 C 11.996 180.767, 21.699 190.259, 31.816 195.272 L 40.348 199.500 133.674 199.770 L 227 200.040 227 174.543 L 227 149.046 166.913 148.773 L 106.826 148.500 104.413 145.694 L 102 142.888 102 102.592 L 102 62.296 104.290 58.898 L 106.579 55.500 167.790 55.242 L 229 54.985 229 29.492 L 229 4 136.750 4.054 C 50.942 4.104, 44.109 4.233, 38.905 5.898"/>
-            </svg>
-            <!-- K -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 250 204" version="1.1">
-                <path d="M 3 102 L 3 200 51.984 200 L 100.969 200 101.234 171.750 L 101.500 143.500 107.968 155 C 117.733 172.360, 133.597 188.073, 150 196.631 L 155.500 199.500 200.250 199.789 L 245 200.078 245 174.157 L 245 148.236 232.250 147.788 C 221.526 147.410, 218.534 146.937, 213.419 144.808 C 200.147 139.285, 188.133 129.504, 180.556 118.055 C 172.131 105.323, 170.425 93.904, 175.469 84 C 179.268 76.540, 192.664 63.405, 201 58.966 L 207.500 55.504 226.250 55.158 L 245 54.813 245 29.406 L 245 4 205.682 4 C 162.047 4, 161.141 4.107, 149 10.688 C 140.607 15.237, 130.309 23.604, 126.500 28.968 C 124.850 31.291, 121.524 35.485, 119.110 38.287 C 114.761 43.334, 111.243 50.034, 104.822 65.500 L 101.500 73.500 101.237 38.750 L 100.974 4 51.987 4 L 3 4 3 102"/>
-            </svg>
-            <!-- Y -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 249 205" version="1.1">
-                <path d="M 3 29.308 L 3 54.694 13.778 55.311 C 25.946 56.007, 35.250 58.482, 42 62.819 C 44.475 64.410, 51.331 70.311, 57.236 75.933 C 65.690 83.983, 68.613 87.498, 70.986 92.471 L 74 98.786 74 149.393 L 74 200 123 200 L 172 200 172.006 146.750 C 172.009 113.604, 172.397 92.112, 173.032 89.824 C 175.415 81.244, 188.672 67.589, 203.199 58.750 L 209.363 55 227.181 55 L 245 55 245 29.500 L 245 4 205.396 4 L 165.792 4 158.918 7.612 C 150.402 12.088, 140.990 21.144, 134.359 31.244 L 129.311 38.934 126.816 36.217 C 125.444 34.723, 122.263 30.771, 119.746 27.436 C 113.739 19.476, 104.724 11.231, 97.948 7.500 L 92.500 4.500 47.750 4.211 L 3 3.922 3 29.308" />
-            </svg>
-            <!-- U -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item w-96 h-96" viewBox="0 0 263 207" version="1.1">
-                <path d="M 4.233 85.750 L 4.500 166.500 7.423 172.500 C 11.731 181.342, 22.465 191.673, 32.448 196.588 L 40.397 200.500 131 200.500 L 221.604 200.500 229.306 196.693 C 237.958 192.417, 247.314 184.328, 251.825 177.222 C 258.146 167.266, 258 169.494, 258 83.318 L 258 5 209 5 L 160 5 160 73.632 C 160 140.647, 159.953 142.341, 157.989 145.518 C 156.882 147.308, 154.970 149.043, 153.739 149.373 C 150.901 150.133, 110.215 150.165, 107.398 149.408 C 106.242 149.098, 104.554 147.289, 103.648 145.388 C 102.167 142.282, 102 134.994, 102 73.466 L 102 5 52.983 5 L 3.965 5 4.233 85.750"/>
-            </svg>
-            <!-- X -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-none background-item x" viewBox="0 0 253 207" version="1.1">
-                <path d="M 5 30.471 L 5 56 10.750 56.008 C 20.493 56.022, 33.693 57.914, 39.737 60.162 C 47.684 63.118, 58.050 73.399, 70.929 91.097 C 80.986 104.916, 81.106 105.148, 79.986 108.543 C 76.560 118.922, 56.861 138.877, 42.601 146.411 C 37.909 148.891, 37.013 149, 21.351 149 L 5 149 5 175 L 5 201 31.750 200.965 C 67.027 200.919, 75.212 199.454, 87.523 190.985 C 94.203 186.388, 104.365 176.619, 109.313 170.037 L 113.616 164.313 120.432 171.906 C 129.220 181.697, 139.013 190.290, 146.217 194.532 C 157.324 201.072, 156.678 201, 204.035 201 L 247 201 247 175 L 247 149 236.475 149 C 223.964 149, 217.872 147.210, 208.023 140.641 C 194.605 131.690, 184.686 120.646, 178.450 107.714 C 173.949 98.379, 173.246 92.493, 175.913 86.465 C 180.375 76.377, 195.075 59.443, 201.485 57.006 C 202.960 56.445, 213.613 56, 225.565 56 L 247 56 247 30.500 L 247 5 209.126 5 C 178.037 5, 170.491 5.268, 167.005 6.498 C 157.769 9.757, 144.252 21.626, 136.526 33.263 C 134.431 36.418, 132.607 39, 132.473 39 C 132.340 39, 129.273 35.013, 125.658 30.140 C 117.610 19.290, 109.846 12.054, 102.250 8.323 L 96.500 5.500 50.750 5.221 L 5 4.942 5 30.471"/>
-            </svg>
-        </div>
-        <div id="content" class="h-full w-full flex flex-col items-center justify-center">
-            <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center stretch" style="font-family: 'Federal Escort', sans-serif; max-height: 314px; padding-bottom: 16px;">
-                <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-400 select-none">
-                    <h2 class="flex self-start text-supertitle after" style="max-height: 72px">
-                        <span style="max-width: 0px; overflow: hidden; display: block;">TH</span>
-                        I
-                        <span style="max-width: 0px; overflow: hidden; display: block;">S</span>
-                    </h2>
-                    <h2 class="flex self-end ml-auto text-supertitle after stretch" style="max-height: 72px">
-                        <span class="initial" style="overflow: hidden; display: block">am</span>
-                        <span style="max-width: 0px; overflow: hidden; display: block;">IS</span>
-                    </h2>
+    <main class="h-fit w-full">
+        <div id="content" class="min-h-full w-full" style="background: linear-gradient(to bottom, #080808, #262626);">
+        <!--- bg-linear-to-b from-gray-800 to-slate-950" > ---!>
+            <div id="hero" class="h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+                <div class="h-full w-full flex flex-col items-center justify-center" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-beige-100 text-title select-none">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-fuchsia-800 text-title select-none" style="color: #B06D11;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-violet-800 text-title select-none">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-rose-800 text-title select-none">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #B01E11;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #54B011;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #11A3B0;">nickyux</h1>
+                    </div>
+                    <div id="starter" class="h-fit w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 314px; padding-bottom: 16px;">
+                        <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-200 select-none">
+                            <h2 class="flex self-start text-supertitle" style="max-height: 72px">
+                                I
+                            </h2>
+                            <h2 class="flex self-end ml-auto text-supertitle" style="max-height: 72px">
+                                am
+                            </h2>
+                        </div>
+                        <h1 class="text-beige-100 text-title after stretch select-none" style="text-rendering: geometricPrecision; -webkit-backface-visibility: hidden; transform: translateZ(0); will-change: transform; -webkit-perspective: 1000;" >nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #B01E11;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #54B011;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center up" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #11A3B0;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center stretch" style="font-family: 'Federal Escort', sans-serif; max-height: 314px; padding-bottom: 16px;">
+                        <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-200 select-none">
+                            <h2 class="flex self-start text-supertitle after" style="max-height: 0px; opacity: 0;">
+                                <span style="max-width: 0px; overflow: hidden; display: block;">TH</span>
+                                I
+                                <span style="max-width: 0px; overflow: hidden; display: block;">S</span>
+                            </h2>
+                            <h2 class="flex self-end ml-auto text-supertitle after stretch" style="max-height: 0px; opacity: 0;">
+                                <span class="initial" style="overflow: hidden; display: block">am</span>
+                                <span style="max-width: 0px; overflow: hidden; display: block;">IS</span>
+                            </h2>
+                        </div>
+                        <h1 class="text-beige-100 text-title after stretch select-none" style="text-rendering: geometricPrecision;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #B01E11;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #54B011;">nickyux</h1>
+                    </div>
+                    <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
+                        <h1 class="text-title select-none" style="color: #11A3B0;">nickyux</h1>
+                    </div>
                 </div>
-                <h1 class="text-purple-800 text-title after stretch select-none">nickyux</h1>
             </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div class="h-full w-fit flex flex-col items-center justify-center down" style="font-family: 'Federal Escort', sans-serif; max-height: 253px; padding-bottom: 16px;">
-                <h1 class="text-purple-800 text-title select-none">nickyux</h1>
-            </div>
-            <div id="animation-primary" class="h-full w-fit flex flex-col items-center justify-center pb-4" style="font-family: 'Federal Escort', sans-serif;  opacity: 0;">
-                <div class="w-full px-2 flex flex-row items-center justify-center text-center text-emerald-400 select-none" style>
-                    <h2 class="self-start text-supertitle after" style="max-width: 80px;">I</h2>
-                    <h2 class="self-end ml-auto text-supertitle after">am</h2>
+            <div id="scroll" class="h-screen flex flex-col justify-center">
+                <!-- <h3 id="inner-supertitle" class="text-supertitle text-white w-max mb-4" style="opacity: 0; max-height: 0px;">my</h3> -->
+                <div class="inner h-screen flex flex-col justify-center px-32 w-fit text-stone-400" style="font-family: 'Druk Wide Bold', sans-serif; padding-bottom: 16px; color: #AAAAAA;">
+                    <h1 class="text-title w-max">I make <span class="text-block" id="invisible" style="text-shadow: rgba(0,0,0,0) 0px;">INVISIBLE</span> <span id="things">things</span> <span id="work">WORK</span></h1>
                 </div>
-                <h1 class="text-purple-800 text-title after select-none" style="transform: scale(1, 5);">nickyux</h1>
+                <!-- <div class="inner h-full flex flex-col justify-center px-24 w-fit" style="font-family: 'Druk Wide Bold', sans-serif; max-height: 253px; padding-bottom: 16px;"> -->
+                <!--     <h2>Test</h2> -->
+                <!-- </div> -->
             </div>
+            <!-- <div> -->
+            <!--     <span>Test</span> -->
+      r     <!-- </div> -->
         </div>
     </main>
 </body>
-</html>
