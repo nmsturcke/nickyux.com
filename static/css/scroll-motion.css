@@ -1,0 +1,33 @@
+/* Scroll choreography is an enhancement: the base page stays readable. */
+.gsap-ready .reveal { transition: none; }
+.motion-word { display: inline-block; overflow: clip; vertical-align: bottom; padding-bottom: .12em; margin-bottom: -.12em; }
+.motion-word > span { display: inline-block; transform-origin: 50% 100%; }
+.scroll-progress { position: fixed; inset: 0 0 auto; height: 3px; background: var(--purple); z-index: 25; transform-origin: left; pointer-events: none; }
+.growth-track { grid-column: 1 / -1; height: 3px; background: var(--line); margin-top: 15px; overflow: hidden; }
+.growth-track > span { display: block; height: 100%; background: var(--purple); transform-origin: left; }
+.gsap-ready .experience-strip { background: var(--ink); }
+.gsap-ready .project-art { transform-origin: 50% 70%; }
+.gsap-ready .skill { perspective: 800px; }
+.gsap-ready .contact { overflow: clip; }
+.gsap-ready .lab-grid { perspective: 1200px; }
+.gsap-ready .project { perspective: 1400px; }
+.gsap-ready .section-heading { perspective: 900px; }
+.growth-stage { grid-column: 1 / -1; position: relative; height: 290px; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: clip; isolation: isolate; }
+.growth-readout { font: 900 clamp(100px, 13vw, 190px)/1 Display, sans-serif; letter-spacing: -.075em; color: var(--purple); }
+.growth-unit { font-size: .65em; }
+.growth-caption { font-size: 11px; letter-spacing: 2px; margin-top: 12px; text-align: center; }
+.growth-orbits { position: absolute; width: 540px; height: 230px; z-index: -1; }
+.growth-orbits i { position: absolute; inset: 0; border: 1px solid #bb95f47a; border-radius: 50%; }
+.growth-orbits i:nth-child(2) { transform: rotate(60deg); }
+.growth-orbits i:nth-child(3) { transform: rotate(-60deg); }
+.gsap-ready .experience-strip { row-gap: 20px; }
+.gsap-ready .contact { position: relative; isolation: isolate; }
+.contact-halo { position: absolute; width: 650px; height: 650px; border: 1px solid #18151c20; border-radius: 50%; right: -170px; top: -60px; z-index: -1; pointer-events: none; box-shadow: 0 0 0 70px #18151c07, 0 0 0 140px #18151c07, 0 0 0 210px #18151c07; }
+@media (max-width: 999px) {
+  .growth-stage { height: 220px; }
+  .growth-orbits { width: 340px; height: 160px; }
+  .growth-caption { font-size: 9px; letter-spacing: 1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress, .growth-track { display: none; }
+}

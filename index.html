@@ -1,259 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L777M5SP41"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-L777M5SP41');
-    </script>
-    <meta charset="UTF-8" data-react-helmet="true">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="minimum-scale=1.0, width=device-width">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nickyux.com/">
-    <!-- <meta property="og:site_name" content="Nickyux"> -->
-    <meta property="og:keywords" content="Nicky,Nickyux,Nicholas,Resume,About Me,About">
-    <!-- <meta property="twitter:card" content="summary_large_image"> -->
-    <meta property="twitter:site:id" content="@nickyux3003">
-    <meta property="twitter:creator" content="@nickyux3003">
-    <meta property="twitter:creator:id" content="@nickyux3003">
-    <meta property="og:locale" content="en-US">
-    <meta property="og:title" content="Nickyux">
-    <meta property="og:description" content="Nickyux's personal website, where you can find more information about his previous and current projects and find out how to contact him." data-react-helmet="true">
-    <meta property="description" content="Nickyux's personal website, where you can find more information about his previous and current projects and find out how to contact him." data-react-helmet="true">
-    <meta property="og:image" content="/static/img/logo.png" data-react-helmet="true">
-    <meta property="image" content="/static/img/logo.png" data-react-helmet="true">
-    <meta property="og:image:alt" content="A white letter N inside a dark purple circle with a lighter purple border" data-react-helmet="true">
-    <meta property="theme-color" content="#2e0044" data-react-helmet="true">
-    <link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/onscroll.css">
-    <script src="static/js/index.js" defer></script>
-    <script src="static/js/mobilenav.js" defer></script>
-    <script src="static/js/onscroll.js" defer></script>
-    <title>Nickyux</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nicky — engineering systems, leading operations, and helping online platforms grow.">
+<meta name="theme-color" content="#18151c">
+<title>Nickyux — Engineering, operations & leadership</title>
+<link rel="icon" href="/static/img/favicon.ico">
+<link rel="stylesheet" href="/static/css/portfolio.css"><link rel="stylesheet" href="/static/css/portfolio-refresh.css">
+<link rel="stylesheet" href="/static/css/scroll-motion.css">
+<script src="/static/js/vendor/gsap.min.js" defer></script>
+<script src="/static/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/static/js/scroll-motion.js" defer></script>
+<script src="/static/js/portfolio.js" defer>
+</script>
 </head>
-
-<div class="mobile-navigation mobile " data-mobilenav-content>
-    <div class="mobilenav-content-wrapper">
-        <div class="mobilenav-wrapper">
-            <div class="mobilenav-content">
-                <ul class="mobilenav list-unstyled">
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#about-me');">About Me</button>
-                    </li>
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#experience');">Experience</button>
-                    </li>
-                    <li class="mobilenav-li">
-                        <button class="btn-unstyled a" onclick="closeHamburger('#contact');">Contact</button>
-                    </li>
-                    <li class="mobilenav-li separate">
-                        <button class="btn-unstyled a mobile-scroll-to-top" onclick="closeHamburger('#top');" data-scroll-to-top-mobile><svg class="back-to-top-svg" clip-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z" fill-rule="nonzero"/></svg>Back to Top</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<body>
+<div class="entrance" aria-hidden="true">
+<div class="entrance-panel">
 </div>
-<body class="no-scroll">
-    <div class="loading-body" data-loading-body>
-        <div class="centered">
-            <noscript>
-                <h1>This website requires Javascript to work</h1>
-            </noscript>
-            <div class="loading-logo-wrapper">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="512" viewBox="0, 0, 512, 512" class="loading-logo" data-loading-logo>
-                    <g id="Layer_1">
-                        <path class="loading-logo-path" id="loading-logo-path-1" d="M256.5,462.5 C142.729,462.5 50.5,370.271 50.5,256.5 C50.5,142.729 142.729,50.5 256.5,50.5 C370.271,50.5 462.5,142.729 462.5,256.5 C462.5,370.271 370.271,462.5 256.5,462.5 z" />
-                        <path class="loading-logo-path" id="loading-logo-path-2" d="M176.5,381 L176.5,132 L336.5,381 L336.5,132" />
-                    </g>
-                  </svg>
-            </div>
-        </div>
-    </div>
-    <main class="main-body">
-        <div class="content">
-            <header class="header fixed-top appear anim1">
-                <div class="logo-header">
-                    <a href="#content" class="skip-navigation">Skip Navigation</a>
-                    <a href="/">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="512" viewBox="0, 0, 512, 512" class="logo-header-img">
-                            <g id="Layer_1">
-                                <path class="loading-logo-path transition appear" id="loading-logo-path-1" d="M256.5,462.5 C142.729,462.5 50.5,370.271 50.5,256.5 C50.5,142.729 142.729,50.5 256.5,50.5 C370.271,50.5 462.5,142.729 462.5,256.5 C462.5,370.271 370.271,462.5 256.5,462.5 z" />
-                                <path class="loading-logo-path transition appear" id="loading-logo-path-2" d="M176.5,381 L176.5,132 L336.5,381 L336.5,132" />
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="navbar-wrapper ">
-                    <ul class="navbar pc">
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#about-me');">About Me</button>
-                        </li>
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#experience');">Experience</button>
-                        </li>
-                        <li class="navbar-item">
-                            <button class="btn-unstyled a" onclick="scrollFunc('#contact');">Contact</button>
-                        </li>
-                    </ul>
-                    <div class="select-menu mobile">
-                        <div id="hamburger-wrapper" class="hamburger-wrapper" data-mobilenav-toggle>
-                            <div id="hamburger" class="hamburger" data-mobilenav-toggle-icon>
-                            </div>
-                        </div>
-                        </ul>
-                    </div>
-                </div>
-                <button class="btn-unstyled back-to-top pc" onclick="scrollFunc('#top')" data-scroll-to-top-pc aria-label="Back to Top"><svg class="back-to-top-svg" clip-rule="evenodd" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.001 10.978h-3.251c-.412 0-.75-.335-.75-.752 0-.188.071-.375.206-.518 1.685-1.775 4.692-4.945 6.069-6.396.189-.2.452-.312.725-.312.274 0 .536.112.725.312 1.377 1.451 4.385 4.621 6.068 6.396.136.143.207.33.207.518 0 .417-.337.752-.75.752h-3.251v9.02c0 .531-.47 1.002-1 1.002h-3.998c-.53 0-1-.471-1-1.002z" fill-rule="nonzero"/></svg><span data-scroll-to-top-pc-text class="back-to-top-text">Back to Top</span></button>
-            </header>
-            <section class="top" id="top">
-                <div class="title" data-title>
-                    <div class="appear anim2" style="animation-delay: 100ms">
-                        <span id="pretitle">I am</span>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 200ms">
-                        <h1 id="title">Nickyux,</h1>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 300ms">
-                        <h2 id="subtitle">I make invisible things work.</h2>
-                    </div>
-                    <div class="appear anim2" style="animation-delay: 400ms">
-                        <p>I build backend structures to support the frontend of projects.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="content">
-                <div class="content-wrapper">
-                    <div class="top content-section about-me-wrapper content-blue" id="about-me">
-                        <div class="about-me-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">About Me</h1>
-                        </div>
-                        <div class="about-me-content-wrapper row">
-                            <div class="about-me-content col-md-7 col-12 scroll-hide from-left">
-                                <p>Hello! My name is Nicholas Sturcke, but most people just call me Nicky.</p>
-                                <p>I was born in <a class="a" href="https://www.google.com/maps/@51.5287718,-0.2416802,11z" target="_blank">London</a> <span data-age>16</span> years ago but moved to Spain at a young age, I currently live in <a class="a" href="https://www.google.com/maps/place/La+Rioja" target="_blank">La Rioja, Spain</a>. I speak <img class="country-icon" src="/static/img/uk.png"> English and <img class="country-icon" src="/static/img/spain.png"> Spanish fluently.</p>
-                                <p>I enjoy starting and working on development projects, most of my work so far has been related to API's and Web Development. My most relevant published projects are available by clicking <button class="btn-unstyled a" onclick="scrollFunc('#experience')">this link</button>.</p>
-                                <p>I started messing about with computers at a young age and, when I got my hands on a book on Python, I learnt all I could about it. Since then I have learnt other languages such as HTML, CSS & JavaScript!</p>
-                                <p style="margin: 0 0 5px 0;">Some of my main passions are the following:</p>
-                                <ul class="passions-list list-unstyled">
-                                    <li>Piano</li>
-                                    <li>Cats</li>
-                                    <li>Coding</li>
-                                    <li>Video Games</li>
-                                    <li>Community Management</li>
-                                    <li>Cyber Security</li>
-                                </ul>
-                            </div>
-                            <div class="about-me-img scroll-hide from-right col-md-5 col-12">
-                                <img class="content-logo" src="/static/img/logo.png" alt="Logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-section experience-wrapper content-blue" id="experience">
-                        <div class="experience-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">Experience</h1>
-                        </div>
-                        <div class="experience-content-wrapper ">
-                            <div class="experience-content scroll-hide from-right">
-                                <p>I have worked on a few projects in my years of development, below are my main projects.</p>
-                                <ul class="experience-list list-unstyled">
-                                    <li>
-                                        <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/cellule.png"><a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Cellule</a></h3>
-                                            <p class="experience-item-text">Cellule is an Invite Logging bot for Discord designed to give Discord Managers a great experience when dealing with invites, aiming to make up for where Discord's features stop.</p>
-                                            <p class="experience-item-text">Since the start of the project in July 2021, it has served over 2.6 million users in over 1000 different servers.</p>
-                                            <ul class="experience-item-links">
-                                                <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/" rel="noopener noreferrer" target="_blank">Website</a>
-                                                </li>
-                                                <li>
-                                                    <a class="a" href="https://cellule.nickyux.com/add" rel="noopener noreferrer" target="_blank">Add the Bot</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <h3 class="experience-item-title"><img class="experience-icon" src="/static/img/elite.png"><a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Elite Scrims</a></h3>
-                                            <p class="experience-item-text">Elite Scrims is a network of Discord servers with over 1 million members.</p>
-                                            <p class="experience-item-text">I have worked on a custom bot for their servers to adjust to their needs and, more recently, on a website to help their players!</p><ul class="experience-item-links">
-                                                <li>
-                                                    <a class="a" href="https://elitescrims.com/" rel="noopener noreferrer" target="_blank">Website</a>
-                                                </li>
-                                                <li>
-                                                    <a class="a" href="https://discord.gg/fn" rel="noopener noreferrer" target="_blank">Join Elite Customs (Discord Server)</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p>I also contribute to Open-Source projects, you can find most of them on my <a class="a" href="https://github.com/nmsturcke" rel="noreferrer noopener" target="_blank">GitHub Profile</a>!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="content-section contact-wrapper content-blue" id="contact">
-                        <div class="contact-title content-title scroll-hide fade-in">
-                            <h1 class="content-title-h1">Contact</h1>
-                        </div>
-                        <div class="contact-content-wrapper ">
-                            <div class="contact-content scroll-hide from-right">
-                                <p>You can reach out to me by clicking the button below, feel free to drop me an email if you need anything, or just want to say Hello!</p>
-                                <a href="mailto:me@nickyux.com" class="say-hello">Say Hello</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="footer" class="footer">
-                <span>Built by Nicholas Sturcke</span>
-                <span><a class="a" href="https://github.com/nmsturcke/nickyux.com" rel="noreferrer noopener" target="_blank">GitHub Repository</a></span>
-                <span class="copy">&copy; Nickyux</span>
-            </section>
-        </div>
-        
-        <div class="background-overlay">
-            <div class="background-shapes" data-shapes-container>
-            </div>
-        </div>
-        <div orientation="left" class="side-left appear anim4 pc" style="animation-delay: 500ms;">
-            <ul class="socials-list">
-                <li>
-                    <a href="https://github.com/nmsturcke" aria-label="GitHub" target="_blank" rel="noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socials-logo github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/nickyux3003" aria-label="Twitter" target="_blank" rel="noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="socials-logo twitter"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://discord.gg/8HfUfuKtC7" aria-label="Discord" target="_blank" rel="noreferrer">
-                        <svg viewBox="-10 -30 275 275" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" fill="none" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" class="socials-logo twitter">
-                            <g>
-                                <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" ></path>
-                            </g>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div orientation="right" class="side-right appear anim4 pc" style="animation-delay: 500ms;">
-            <div class="email-wrapper">
-                <a href="mailto:me@nickyux.com" class="email-text">me@nickyux.com</a>
-            </div>
-        </div>
-    </main>
+<div class="entrance-name">Nickyux
+</div>
+<div class="entrance-rule">
+</div>
+</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="brand" href="/" aria-label="Nickyux home">N</a>
+<nav aria-label="Main navigation"><a href="#work">Work</a><a href="#approach">What I do</a><a href="#about">About</a>
+</nav><a class="header-contact" href="mailto:me@nickyux.com">Let’s talk </a>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-top"><span class="eyebrow"><i class="status-dot"></i> A little corner of my internet</span><span class="eyebrow location">Based in Spain · Connected everywhere</span>
+</div>
+<h1 id="hero-title" class="wordmark" aria-label="Nickyux"><span aria-hidden="true">N</span><span aria-hidden="true">i</span><span aria-hidden="true">c</span><span aria-hidden="true">k</span><span aria-hidden="true">y</span><span aria-hidden="true">u</span><span aria-hidden="true">x</span><b aria-hidden="true">✳</b>
+</h1>
+<div class="hero-bottom">
+<p>I build the systems.<br>I help shape <em>what’s next.</em>
+</p>
+<div class="hero-description">
+<p>Hey, I’m Nicky. I work across engineering, operations, and leadership—turning ideas into working platforms and helping the people behind them move forward.</p><a class="text-link" href="#work">Explore my world<svg class="link-arrow cue-down" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</div>
+</div>
+<div class="hero-foot"><span>Engineering / Operations / Leadership</span><span>Scroll to discover</span>
+</div>
+</section>
+<div class="chapter-divider" aria-hidden="true"><span></span><i>✳</i><span></span>
+</div>
+<section class="work section" id="work">
+<div class="section-heading reveal">
+<div><span class="eyebrow">01 / A few things I’m part of</span>
+<h2>Selected <em>work.</em>
+</h2>
+</div>
+<p>From everyday operations<br>to the bigger decisions.</p>
+</div>
+<a class="project project-elite reveal" href="/work/elite-scrims/">
+<div class="project-art elite-art"><span class="art-label">SIX YEARS. A MUCH BIGGER PICTURE.</span>
+<div class="elite-rings" aria-hidden="true">
+</div>
+<div class="elite-word">SUPPORT.<br>BUILD.<br><span>LEAD.</span>
+</div><img class="elite-logo" src="/static/img/elite.png" alt="Elite Scrims logo"><span class="art-caption">From support member to co-owner</span>
+</div>
+<div class="project-info">
+<div>
+<div class="tags"><span>Co-ownership</span><span>Operations</span><span>Engineering</span>
+</div>
+<h3>Elite Scrims</h3>
+<p>Six years of volunteering, from player support to helping lead a platform of 1.3 million members.</p>
+</div><span class="circle-arrow" aria-hidden="true"><svg class="link-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+</div></a>
+<a class="project project-practice reveal" href="/work/practice-server/">
+<div class="project-art practice-brand-art"><img src="/static/img/practice-server-banner.png" alt="Practice Server" width="1200" height="630" loading="lazy">
+</div>
+<div class="project-info">
+<div>
+<div class="tags"><span>Client collaboration</span><span>Architecture</span>
+</div>
+<h3>Practice Server</h3>
+<p>Working with the CEO and COO to turn a product vision into a connected user experience.</p>
+</div><span class="circle-arrow" aria-hidden="true"><svg class="link-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+</div></a>
+<div class="experience-strip reveal">
+<div><span class="eyebrow">Long-term perspective</span><strong>~200k to 1.3m</strong>
+<p>Elite Scrims membership over my six years with the platform. Growth achieved together.</p>
+</div>
+<div><span class="eyebrow">From the ground up</span><strong>Support to Co-owner</strong>
+<p>Player support, staff management, partnerships, logistics, technical systems, and strategic direction.</p>
+</div>
+</div>
+<div class="work-note"><span>Always building, always learning.</span><a class="text-link" href="https://github.com/nmsturcke" target="_blank" rel="noopener noreferrer">More on GitHub<svg class="link-arrow cue-right" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</div>
+</section>
+<section class="approach section" id="approach">
+<div class="section-heading reveal">
+<div><span class="eyebrow">02 / More than one hat</span>
+<h2>Build. Operate.<br><em>Move things forward.</em>
+</h2>
+</div>
+<p>Different skills.<br>One connected approach.</p>
+</div>
+<div class="skills">
+<article class="skill reveal"><span class="skill-number">01 /</span>
+<div class="skill-icon" aria-hidden="true">{ }</div>
+<h3>Build the tools.</h3>
+<p>Microservices, backend systems, API integrations, and frontend components. I connect the technical decisions to what a platform and its users actually need.</p><span class="skill-label">Software development</span>
+</article>
+<article class="skill reveal"><span class="skill-number">02 /</span>
+<div class="skill-icon" aria-hidden="true">◎</div>
+<h3>Run the operation.</h3>
+<p>Staff management, logistics, partnerships, and day-to-day coordination. I work across the moving parts that keep a growing platform running.</p><span class="skill-label">Operations & management</span>
+</article>
+<article class="skill reveal"><span class="skill-number">03 /</span>
+<div class="skill-icon" aria-hidden="true">◎</div>
+<h3>Shape the direction.</h3>
+<p>I work with founders, executives, and delivery teams to understand the vision, suggest improvements, and translate decisions into a practical way forward.</p><span class="skill-label">Leadership & collaboration</span>
+</article>
+</div>
+</section>
+<section class="ongoing section" id="experience">
+<div class="section-heading reveal">
+<div><span class="eyebrow">03 / Experience beyond the build</span>
+<h2>People on the<br><em>other side.</em>
+</h2>
+</div>
+<p>Trust earned over time.<br>Care in the day-to-day.</p>
+</div>
+<article class="moderation-feature reveal">
+<div class="moderation-mark" aria-hidden="true">LIVE<span>●</span>
+</div>
+<div><span class="eyebrow">Suja / Twitch moderation</span>
+<h3>Six years behind the chat.</h3>
+<p>For six years, I’ve volunteered as a Twitch moderator for Suja, whose channel has over one million followers. It’s sustained, hands-on experience in online content moderation alongside my work in platform operations.</p>
+<div class="tags"><span>Content moderation</span><span>6 years</span><span>1m+ channel followers</span>
+</div>
+</div>
+</article>
+<div class="freelance-note reveal"><span class="eyebrow">Independent engineering</span>
+<p>I’ve also built microservices and backend systems for clients including Practice Server and various Twitch streamers, adapting each system to how their business and audience work.</p>
+</div>
+</section>
+<section class="projects-lab section" id="projects">
+<div class="section-heading reveal">
+<div><span class="eyebrow">04 / Things I’ve built</span>
+<h2>Ideas into<br><em>applications.</em>
+</h2>
+</div>
+<p>Independent projects.<br>Useful little systems.</p>
+</div>
+<div class="lab-grid">
+<a class="lab-card reveal" href="/work/beep/"><span class="release-status">Repository being prepared for release</span>
+<div class="beep-card-logo"><img src="/static/img/beep.png" alt="Beep logo" width="1024" height="1024" loading="lazy">
+</div>
+<h3>Beep
+</h3>
+<p>A Discord economy and multiplayer games platform, with real-time coordination between the bot and activity frontend.</p>
+<div class="tags"><span>Python / Quart</span><span>WebSockets</span><span>MongoDB</span>
+</div><span class="card-action">Explore project <svg class="link-arrow cue-right" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+<a class="lab-card reveal" href="/work/sentry-to-github/"><span class="release-status">Open source · Available on GitHub</span>
+<div class="sentry-card-logo"><img src="/static/img/sentry-to-github.png" alt="Sentry to GitHub logo" width="120" height="120" loading="lazy"></div>
+<h3>Sentry-To-GitHub
+</h3>
+<p>A self-hosted service that turns Sentry alerts into GitHub issues, keeping errors alongside the code that needs attention.</p>
+<div class="tags"><span>Python / Quart</span><span>GitHub App</span><span>MongoDB</span>
+</div><span class="card-action">Explore project <svg class="link-arrow cue-right" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+</div>
+<a class="cellule-row reveal" href="/work/cellule/"><img src="/static/img/cellule.png" alt="">
+<div><span class="eyebrow">Also built</span>
+<h3>Cellule</h3>
+<p>Invite logging tools for Discord communities.</p>
+</div><span class="circle-arrow" aria-hidden="true"><svg class="link-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
+</section>
+<section class="about section" id="about">
+<div class="about-art reveal"><span class="eyebrow">The person behind the username</span>
+<div class="personal-mark" aria-hidden="true">N<span>✳</span>
+</div>
+<div class="about-stickers"><span>Hello / Hola</span><span>Made of curiosity</span>
+</div>
+</div>
+<div class="about-copy reveal"><span class="eyebrow">05 / A bit about me</span>
+<h2>Online as Nickyux.<br>Just <em>Nicky</em> works.</h2>
+<p>I’m Nicholas Sturcke. Born in London, based in Spain, and comfortable in both English and Spanish.</p>
+<p>I’ve been curious about computers since I was young. That curiosity grew into engineering systems, taking on operational responsibility, and helping shape the platforms I’m part of.</p>
+<p>Outside of that? Piano, cats, video games, and finding the next thing to learn.</p>
+<div class="interests"><span>♫ Piano</span><span>Gaming</span><span>✧ Curious by default</span>
+</div>
+</div>
+</section>
+<section class="contact section" id="contact">
+<div class="contact-top"><span class="eyebrow">06 / Keep the conversation going</span><span class="contact-star" aria-hidden="true">✳</span>
+</div>
+<h2>Good things start<br>with a <a href="mailto:me@nickyux.com"><em>hello.</em></a>
+</h2>
+<div class="contact-bottom">
+<p>A project, a community, or just something interesting.<br>I’d love to hear about it.</p><a class="text-link" href="mailto:me@nickyux.com">me@nickyux.com<svg class="link-arrow cue-right" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+</div>
+</section>
+</main>
+<footer><a class="footer-brand" href="#main">Nickyux</a><span>A work in progress. Like all good things.</span><a href="https://github.com/nmsturcke" target="_blank" rel="noopener noreferrer">GitHub</a><span>© <span data-year>2026</span> Nickyux</span>
+</footer>
 </body>
 </html>
