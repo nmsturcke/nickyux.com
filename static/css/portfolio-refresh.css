@@ -130,6 +130,49 @@ body:has(.entrance) .hero-bottom, body:has(.entrance) .hero-top { animation: her
 }
 
 /* Sparse, font-independent navigation icons. */
+.back-to-top-button {
+  position: fixed;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  z-index: 15;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #18151c;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--ink);
+  box-shadow: 0 4px 20px #0004;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(12px) scale(.9);
+  transition: opacity .22s ease, transform .28s ease, background .2s, visibility 0s .28s;
+}
+.back-to-top-button.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+.back-to-top-button svg { display: block; width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.back-to-top-button.is-visible:hover { background: var(--paper); transform: translateY(-3px); }
+.back-to-top-button:focus-visible { outline: 3px solid var(--paper); outline-offset: 4px; }
+.asterisk-icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.chapter-divider i, .contact-star { display: inline-flex; align-items: center; justify-content: center; }
+.personal-mark > span { display: block; }
 .link-arrow {
   display: block;
   width: 20px;
