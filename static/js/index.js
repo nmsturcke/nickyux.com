@@ -217,11 +217,13 @@ function registerScrollTrigger() {
             invalidateOnRefresh: true,
             onLeave: () => {
                 gsap.to("#things", { opacity: 0, duration: 1 });
-                gsap.to("#inner-supertitle", { opacity: 1, maxHeight: "73px", duration: 1 });
+                gsap.to("#inner-supertitle", { opacity: 1, maxHeight: "73px", paddingBottom: "20px", duration: 1, delay: 1 });
+                gsap.to("#inner-supertitle", { textShadow: `${textShadowColor} -2px 2px 0`, duration: 1, delay: 1.5 });
             },
             onEnterBack: () => {
                 gsap.to("#things", { opacity: 1, duration: 1 });
-                gsap.to("#inner-supertitle", { opacity: 0, maxHeight: "0px", duration: 1 });
+                gsap.to("#inner-supertitle", { opacity: 0, maxHeight: "0px", paddingBottom: "0px", duration: 1 });
+                gsap.to("#inner-supertitle", { textShadow: "rgba(0,0,0,0) 0px 0px 0", duration: 0.5 });
             },
         }
 
@@ -291,4 +293,82 @@ window.addEventListener("resize", () => {
     if (horizontalTween) {
         horizontalTween.scrollTrigger.refresh();
     }
+
+    // 128 is the padding of the #work element
+    document.querySelector("#inner-supertitle").style.marginLeft = document.querySelector("#work").offsetLeft - 128 + "px";
 });
+
+window.addEventListener("load", () => {
+    // 128 is the padding of the #work element
+    document.querySelector("#inner-supertitle").style.marginLeft = document.querySelector("#work").offsetLeft - 128 + "px";
+    console.log(`#work.offsetLeft = ${document.querySelector("#work").offsetLeft}`);
+});
+
+function createBackground() {
+    // Lines moving in the background, reactive to scroll.
+
+    const canvas = document.getElementById("background-canvas");
+    const ctx = canvas.getContext("2d");
+
+    let width, height;
+    let lines = [];
+    const lineCount = 50;
+    const lineSpeed = 0.5;
+
+    function init() {
+        resize();
+
+        for (let i = 0; i < lineCount; i++) {
+            lines.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                length: 10 + Math.random() * 100,
+                angle: Math.random() * Math.PI * 2,
+                speed: lineSpeed + Math.random() * lineSpeed,
+            });
+        }
+        animate();
+    }
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+        ctx.lineWidth = 1;
+
+        lines.forEach(line => {
+            line.x += Math.cos(line.angle) * line.speed;
+            line.y += Math.sin(line.angle) * line.speed;
+
+            if (line.x < 0) line.x = width;
+            if (line.x > width) line.x = 0;
+            if (line.y < 0) line.y = height;
+            if (line.y > height) line.y = 0;
+
+            ctx.beginPath();
+            ctx.moveTo(line.x, line.y);
+            ctx.lineTo(line.x - Math.cos(line.angle) * line.length, line.y - Math.sin(line.angle) * line.length);
+            ctx.stroke();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("resize", resize);
+    init();
+
+    gsap.to(canvas, {
+        opacity: 1,
+        duration: 2,
+        ease: "power3.inOut",
+        delay: 1,
+    });
+}
+
+setTimeout(() => createBackground(), 15000);
